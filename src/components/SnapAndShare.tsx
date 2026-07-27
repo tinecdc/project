@@ -50,11 +50,10 @@ export function SnapAndShare() {
           <div className="mt-8 flex items-center justify-center gap-3">
             <Hash size={20} className="text-blush-500" />
             <span className="font-display text-3xl tracking-wide text-burgundy-800 sm:text-4xl">
-              AliciaTurns18
+              AltheaTurns18
             </span>
           </div>
         </Reveal>
-
         <Reveal variant="scale" delay={450}>
           <div className="mt-12 flex flex-col items-center justify-center gap-8 rounded-3xl bg-cream-50 p-8 shadow-lg sm:flex-row sm:p-10">
             <QrPlaceholder />

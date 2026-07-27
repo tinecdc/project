@@ -55,7 +55,7 @@ export function RSVP() {
             <p className="font-serif text-xl leading-relaxed text-cream-100/90">
               Thank you for informing us of your attendance!
             </p>
-            <p className="mt-4 font-formal text-2xl text-blush-200">Alicia Turns 18</p>
+            <p className="mt-4 font-formal text-2xl text-blush-200">Althea Turns 18</p>
             <button
               onClick={() => {
                 setStatus('idle');
@@ -83,7 +83,7 @@ export function RSVP() {
           <CalendarCheck size={30} className="mx-auto text-blush-300" />
           <h2 className="mt-4 font-script text-4xl text-cream-50 sm:text-5xl">RSVP</h2>
           <p className="mt-3 font-serif text-lg italic text-cream-100/80">
-            We are excited to celebrate Alicia&rsquo;s 18th birthday with our closest
+            We are excited to celebrate Althea&rsquo;s 18th birthday with our closest
             families and friends!
           </p>
         </Reveal>
@@ -134,7 +134,7 @@ export function RSVP() {
                 value={form.message}
                 onChange={(e) => update('message', e.target.value)}
                 rows={3}
-                placeholder="A message for Alicia..."
+                placeholder="A message for Althea..."
                 className="form-input resize-none"
               />
             </Field>

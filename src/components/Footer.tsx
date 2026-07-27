@@ -17,10 +17,10 @@ export function Footer() {
             className="inline-flex items-center gap-2 rounded-full bg-cream-50 px-5 py-2.5 text-sm text-burgundy-700 shadow-sm transition-all hover:shadow-md"
           >
             <Phone size={15} className="text-blush-500" />
-            917 853 2668
+            916 604 8920
           </a>
           <a
-            href="mailto:hello@aliciaturns18.com"
+            href="mailto:hello@altheaturns18.com"
             className="inline-flex items-center gap-2 rounded-full bg-cream-50 px-5 py-2.5 text-sm text-burgundy-700 shadow-sm transition-all hover:shadow-md"
           >
             <Mail size={15} className="text-blush-500" />

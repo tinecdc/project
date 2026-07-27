@@ -24,7 +24,7 @@ export function Story() {
                 loading="lazy"
               />
               <div className="absolute -bottom-5 -right-5 rounded-2xl bg-cream-100 px-6 py-4 shadow-lg">
-                <p className="font-script text-2xl text-blush-600">Alicia</p>
+                <p className="font-script text-2xl text-blush-600">Althea</p>
                 <p className="text-xs uppercase tracking-widest text-burgundy-600">The Celebrant</p>
               </div>
             </div>
@@ -65,7 +65,7 @@ export function Story() {
                 kindness, and confidence without arrogance.
               </p>
               <p className="pt-2 font-formal text-2xl text-burgundy-800">Love,</p>
-              <p className="-mt-2 font-script text-3xl text-blush-600">Alicia</p>
+              <p className="-mt-2 font-script text-3xl text-blush-600"><></></p>
             </div>
           </Reveal>
         </div>
