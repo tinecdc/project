@@ -1,7 +1,6 @@
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { Welcome } from '@/components/Welcome';
-import { Story } from '@/components/Story';
 import { DressCode } from '@/components/DressCode';
 import { GiftGuide } from '@/components/GiftGuide';
 import { Venue } from '@/components/Venue';

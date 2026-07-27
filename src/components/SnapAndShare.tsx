@@ -42,7 +42,7 @@ export function SnapAndShare() {
 
         <Reveal variant="up" delay={200}>
           <p className="mx-auto max-w-xl text-center font-serif text-lg leading-relaxed text-burgundy-700">
-            Please tag us and help us document Althea&rsquo;s 18th birthday!
+            Please tag us and help us document Althea Rein&rsquo;s 18th birthday!
           </p>
         </Reveal>
 
@@ -50,7 +50,7 @@ export function SnapAndShare() {
           <div className="mt-8 flex items-center justify-center gap-3">
             <Hash size={20} className="text-blush-500" />
             <span className="font-display text-3xl tracking-wide text-burgundy-800 sm:text-4xl">
-              AltheaTurns18
+              AltheaReinTurns18
             </span>
           </div>
         </Reveal>

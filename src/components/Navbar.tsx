@@ -41,7 +41,7 @@ export function Navbar() {
             scrolled ? 'text-burgundy-800' : 'text-cream-50 text-shadow-soft'
           }`}
         >
-          Althea Turns 18
+          Althea Rein Turns 18
         </button>
 
         <ul className="hidden items-center gap-8 md:flex">

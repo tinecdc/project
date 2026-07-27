@@ -44,7 +44,7 @@ export function Hero() {
         </p>
 
         <h1 className="reveal-scale in-view mt-6 font-formal text-6xl leading-none text-shadow-deep sm:text-7xl md:text-8xl" style={{ animationDelay: '400ms' }}>
-          Althea
+          Althea Rein
         </h1>
         <p className="reveal-fade in-view mt-3 font-script text-3xl text-blush-300 sm:text-4xl md:text-5xl" style={{ animationDelay: '700ms' }}>
           turns 18
@@ -75,7 +75,7 @@ export function Hero() {
           September 12, 2026 &middot; 5:00 PM
         </p>
         <p className="reveal-fade in-view mt-1 text-xs uppercase tracking-widest text-cream-200/70" style={{ animationDelay: '1200ms' }}>
-          Pandi, Bulacan
+          La Casa Rosalina, J.P Rizal St., Poblacion, Pandi, Bulacan
         </p>
       </div>
 
