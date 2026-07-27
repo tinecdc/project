@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
-const EVENT_DATE = new Date('2026-09-12T17:30:00');
+const EVENT_DATE = new Date('2026-09-12T17:00:00');
 
 function getRemaining(target: Date) {
   const diff = target.getTime() - Date.now();
@@ -72,7 +72,7 @@ export function Hero() {
         )}
 
         <p className="reveal-fade in-view mt-12 font-serif text-lg italic text-cream-200/90 sm:text-xl" style={{ animationDelay: '1100ms' }}>
-          September 12, 2026 &middot; 5:30 PM
+          September 12, 2026 &middot; 5:00 PM
         </p>
         <p className="reveal-fade in-view mt-1 text-xs uppercase tracking-widest text-cream-200/70" style={{ animationDelay: '1200ms' }}>
           Pandi, Bulacan
