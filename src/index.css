@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream-100 text-burgundy-800 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .form-input {
+    @apply w-full rounded-xl border border-cream-200/20 bg-cream-50/10 px-4 py-3 font-serif text-base text-cream-50 placeholder:text-cream-200/40 outline-none transition-all;
+  }
+  .form-input:focus {
+    @apply border-blush-300 bg-cream-50/15;
+  }
+}
+
+@layer utilities {
+  .text-shadow-soft {
+    text-shadow: 0 2px 18px rgba(110, 12, 12, 0.35);
+  }
+  .text-shadow-deep {
+    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.55);
+  }
+  .bg-cover-center {
+    background-size: cover;
+    background-position: center;
+  }
+  .perspective {
+    perspective: 1200px;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes kenBurns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.12) translate(-1.5%, -1.5%);
+  }
+}
+
+.reveal {
+  opacity: 0;
+}
+.reveal.in-view {
+  animation: fadeUp 1.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.reveal-fade {
+  opacity: 0;
+}
+.reveal-fade.in-view {
+  animation: fadeIn 1.4s ease forwards;
+}
+.reveal-scale {
+  opacity: 0;
+}
+.reveal-scale.in-view {
+  animation: scaleIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.ken-burns {
+  animation: kenBurns 20s ease-out forwards alternate;
+}
+.float-slow {
+  animation: floatY 6s ease-in-out infinite;
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #b8860b 0%,
+    #f5d77a 25%,
+    #d4af37 50%,
+    #f5d77a 75%,
+    #b8860b 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s linear infinite;
+}
