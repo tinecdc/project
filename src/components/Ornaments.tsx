@@ -5,13 +5,13 @@ type OrnamentProps = {
 export function FloralDivider({ className = '' }: OrnamentProps) {
   return (
     <div className={`flex items-center justify-center gap-4 ${className}`}>
-      <span className="h-px w-16 bg-gradient-to-r from-transparent to-blush-400/70 sm:w-24" />
+      <span className="h-px w-16 bg-gradient-to-r from-transparent to-gold-400/70 sm:w-24" />
       <svg
         width="42"
         height="42"
         viewBox="0 0 42 42"
         fill="none"
-        className="text-blush-500"
+        className="text-gold-500"
         aria-hidden="true"
       >
         <path
@@ -36,7 +36,7 @@ export function FloralDivider({ className = '' }: OrnamentProps) {
         />
         <circle cx="21" cy="21" r="2.5" fill="currentColor" />
       </svg>
-      <span className="h-px w-16 bg-gradient-to-l from-transparent to-blush-400/70 sm:w-24" />
+      <span className="h-px w-16 bg-gradient-to-l from-transparent to-gold-400/70 sm:w-24" />
     </div>
   );
 }
@@ -45,7 +45,7 @@ export function CornerFlourish({ className = '' }: OrnamentProps) {
   return (
     <svg
       viewBox="0 0 120 120"
-      className={`text-blush-400/60 ${className}`}
+      className={`text-gold-400/60 ${className}`}
       fill="none"
       aria-hidden="true"
     >
@@ -71,11 +71,12 @@ export function CornerFlourish({ className = '' }: OrnamentProps) {
 export function SmallDivider({ className = '' }: OrnamentProps) {
   return (
     <div className={`flex items-center justify-center gap-3 ${className}`}>
-      <span className="h-px w-12 bg-blush-400/50" />
+      <span className="h-px w-12 bg-gold-400/50" />
       <svg width="8" height="8" viewBox="0 0 8 8" aria-hidden="true">
-        <circle cx="4" cy="4" r="3" className="fill-blush-500" />
+        <circle cx="4" cy="4" r="3" className="fill-gold-500" />
       </svg>
-      <span className="h-px w-12 bg-blush-400/50" />
+      <span className="h-px w-12 bg-gold-400/50" />
     </div>
   );
 }
+

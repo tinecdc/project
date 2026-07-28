@@ -44,24 +44,24 @@ export function RSVP() {
 
   if (status === 'success') {
     return (
-      <section id="rsvp" className="relative overflow-hidden bg-gradient-to-b from-burgundy-900 to-burgundy-950 py-24 text-cream-100 sm:py-32">
+      <section id="rsvp" className="relative overflow-hidden bg-gradient-to-b from-royal-900 to-royal-950 py-24 text-gold-100 sm:py-32">
         <div className="mx-auto max-w-xl px-6 text-center">
           <Reveal variant="scale">
-            <CheckCircle2 size={64} className="mx-auto text-blush-300" />
-            <h2 className="mt-6 font-script text-4xl text-cream-50 sm:text-5xl">
+            <CheckCircle2 size={64} className="mx-auto text-gold-300" />
+            <h2 className="mt-6 font-script text-4xl text-gold-100 sm:text-5xl">
               Thank you!
             </h2>
             <FloralDivider className="my-6" />
-            <p className="font-serif text-xl leading-relaxed text-cream-100/90">
+            <p className="font-serif text-xl leading-relaxed text-gold-100">
               Thank you for informing us of your attendance!
             </p>
-            <p className="mt-4 font-formal text-2xl text-blush-200">Althea Turns 18</p>
+            <p className="mt-4 font-formal text-2xl text-gold-200">Althea Turns 18</p>
             <button
               onClick={() => {
                 setStatus('idle');
                 setForm({ name: '', email: '', phone: '', message: '', attending: true });
               }}
-              className="mt-8 rounded-full border border-cream-200/30 px-6 py-2.5 text-sm uppercase tracking-widest text-cream-100 transition-all hover:bg-cream-50/10"
+              className="mt-8 rounded-full border border-gold-200/30 px-6 py-2.5 text-sm uppercase tracking-widest text-gold-100 transition-all hover:bg-royal-900/40"
             >
               Submit another response
             </button>
@@ -74,15 +74,15 @@ export function RSVP() {
   return (
     <section
       id="rsvp"
-      className="relative overflow-hidden bg-gradient-to-b from-burgundy-900 to-burgundy-950 py-24 text-cream-100 sm:py-32"
+      className="relative overflow-hidden bg-gradient-to-b from-royal-900 to-royal-950 py-24 text-gold-100 sm:py-32"
     >
       <div className="pointer-events-none absolute inset-0 opacity-15 bg-cover-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1600')" }} />
 
       <div className="relative mx-auto max-w-2xl px-6">
         <Reveal variant="fade" className="text-center">
-          <CalendarCheck size={30} className="mx-auto text-blush-300" />
-          <h2 className="mt-4 font-script text-4xl text-cream-50 sm:text-5xl">RSVP</h2>
-          <p className="mt-3 font-serif text-lg italic text-cream-100/80">
+          <CalendarCheck size={30} className="mx-auto text-gold-300" />
+          <h2 className="mt-4 font-script text-4xl text-gold-100 sm:text-5xl">RSVP</h2>
+          <p className="mt-3 font-serif text-lg italic text-gold-100">
             We are excited to celebrate Althea Rein&rsquo;s 18th birthday with our closest
             families and friends!
           </p>
@@ -91,11 +91,11 @@ export function RSVP() {
         <FloralDivider className="my-8" />
 
         <Reveal variant="up" delay={200}>
-          <p className="mb-8 text-center text-sm uppercase tracking-widest text-cream-200/70">
+          <p className="mb-8 text-center text-sm uppercase tracking-widest text-gold-100">
             The favor of a response is requested before August 30, 2026
           </p>
 
-          <form onSubmit={submit} className="space-y-5 rounded-3xl border border-cream-200/15 bg-cream-50/5 p-6 backdrop-blur-sm sm:p-8">
+          <form onSubmit={submit} className="space-y-5 rounded-3xl border border-gold-200/15 bg-royal-950/20 p-6 backdrop-blur-sm sm:p-8">
             <Field label="Name">
               <input
                 type="text"
@@ -140,7 +140,7 @@ export function RSVP() {
             </Field>
 
             <div>
-              <p className="mb-3 text-sm uppercase tracking-widest text-cream-200/80">
+              <p className="mb-3 text-sm uppercase tracking-widest text-gold-100">
                 Are you attending?
               </p>
               <div className="grid grid-cols-2 gap-3">
@@ -167,7 +167,7 @@ export function RSVP() {
             <button
               type="submit"
               disabled={status === 'submitting'}
-              className="flex w-full items-center justify-center gap-3 rounded-full bg-blush-500 px-8 py-4 text-sm uppercase tracking-widest text-cream-50 transition-all hover:bg-blush-600 disabled:opacity-60"
+              className="flex w-full items-center justify-center gap-3 rounded-full bg-gold-500 px-8 py-4 text-sm uppercase tracking-widest text-cream-50 transition-all hover:bg-gold-600 disabled:opacity-60"
             >
               <Send size={16} />
               {status === 'submitting' ? 'Sending...' : 'Send RSVP'}
@@ -205,11 +205,12 @@ function AttendOption({
       onClick={onClick}
       className={`rounded-xl border px-4 py-3.5 text-center font-serif text-base transition-all ${
         active
-          ? 'border-blush-300 bg-blush-500/25 text-cream-50'
-          : 'border-cream-200/20 bg-cream-50/5 text-cream-100/70 hover:border-cream-200/40'
+          ? 'border-gold-300 bg-gold-500/25 text-cream-50'
+          : 'border-royal-900/30 bg-royal-900/20 text-gold-100/90 hover:border-gold-300'
       }`}
     >
       {label}
     </button>
   );
 }
+

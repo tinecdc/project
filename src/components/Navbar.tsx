@@ -29,7 +29,7 @@ export function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-cream-50/95 backdrop-blur-md shadow-[0_4px_30px_rgba(110,12,12,0.08)] py-3'
+          ? 'bg-royal-950/95 backdrop-blur-md shadow-[0_4px_30px_rgba(16,44,133,0.24)] py-3'
           : 'bg-transparent py-5'
       }`}
     >
@@ -37,7 +37,7 @@ export function Navbar() {
         <button
           onClick={() => go('#home')}
           className={`font-formal text-2xl tracking-wide transition-colors ${
-            scrolled ? 'text-burgundy-800' : 'text-cream-50 text-shadow-soft'
+            scrolled ? 'text-brown-800' : 'text-cream-50 text-shadow-soft'
           }`}
         >
           Althea Rein Turns 18
@@ -48,8 +48,8 @@ export function Navbar() {
             <li key={l.href}>
               <button
                 onClick={() => go(l.href)}
-                className={`text-xs uppercase tracking-widest transition-colors hover:text-blush-500 ${
-                  scrolled ? 'text-burgundy-700' : 'text-cream-50/90 text-shadow-soft'
+                className={`text-xs uppercase tracking-widest transition-colors hover:text-gold-500 ${
+                  scrolled ? 'text-brown-700' : 'text-cream-50/90 text-shadow-soft'
                 }`}
               >
                 {l.label}
@@ -60,7 +60,7 @@ export function Navbar() {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className={`md:hidden ${scrolled ? 'text-burgundy-800' : 'text-cream-50'}`}
+          className={`md:hidden ${scrolled ? 'text-brown-800' : 'text-cream-50'}`}
           aria-label="Toggle menu"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -72,12 +72,12 @@ export function Navbar() {
           open ? 'max-h-96 mt-3' : 'max-h-0'
         }`}
       >
-        <ul className="mx-6 flex flex-col gap-1 rounded-2xl bg-cream-50/98 p-4 shadow-lg backdrop-blur">
+        <ul className="mx-6 flex flex-col gap-1 rounded-2xl bg-royal-950/95 p-4 shadow-lg backdrop-blur">
           {links.map((l) => (
             <li key={l.href}>
               <button
                 onClick={() => go(l.href)}
-                className="w-full rounded-lg px-4 py-3 text-left text-sm uppercase tracking-widest text-burgundy-700 hover:bg-blush-100/60"
+                className="w-full rounded-lg px-4 py-3 text-left text-sm uppercase tracking-widest text-brown-700 hover:bg-gold-100/60"
               >
                 {l.label}
               </button>
@@ -88,3 +88,4 @@ export function Navbar() {
     </header>
   );
 }
+

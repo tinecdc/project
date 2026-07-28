@@ -26,11 +26,11 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative overflow-hidden bg-cream-100 py-24 sm:py-32">
+    <section id="faq" className="relative overflow-hidden bg-royal-950/80 py-24 sm:py-32">
       <div className="mx-auto max-w-3xl px-6">
         <Reveal variant="fade" className="text-center">
-          <HelpCircle size={28} className="mx-auto text-blush-500" />
-          <h2 className="mt-4 font-script text-4xl text-burgundy-800 sm:text-5xl">
+          <HelpCircle size={28} className="mx-auto text-gold-500" />
+          <h2 className="mt-4 font-script text-4xl text-brown-800 sm:text-5xl">
             Frequently Asked Questions
           </h2>
         </Reveal>
@@ -45,20 +45,20 @@ export function FAQ() {
                 <div
                   className={`overflow-hidden rounded-2xl border transition-all duration-300 ${
                     isOpen
-                      ? 'border-blush-400/60 bg-cream-50 shadow-md'
-                      : 'border-blush-200/40 bg-cream-50/60'
+                      ? 'border-gold-400/60 bg-cream-50 shadow-md'
+                      : 'border-gold-200/40 bg-cream-50/60'
                   }`}
                 >
                   <button
                     onClick={() => setOpen(isOpen ? null : i)}
                     className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                   >
-                    <span className="font-serif text-lg font-medium text-burgundy-800 sm:text-xl">
+                    <span className="font-serif text-lg font-medium text-brown-800 sm:text-xl">
                       {item.q}
                     </span>
                     <ChevronDown
                       size={20}
-                      className={`flex-none text-blush-500 transition-transform duration-300 ${
+                      className={`flex-none text-gold-500 transition-transform duration-300 ${
                         isOpen ? 'rotate-180' : ''
                       }`}
                     />
@@ -69,7 +69,7 @@ export function FAQ() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="px-6 pb-6 font-serif text-base leading-relaxed text-burgundy-700">
+                      <p className="px-6 pb-6 font-serif text-base leading-relaxed text-brown-700">
                         {item.a}
                       </p>
                     </div>
@@ -83,3 +83,4 @@ export function FAQ() {
     </section>
   );
 }
+
