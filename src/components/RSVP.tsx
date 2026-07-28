@@ -3,6 +3,7 @@ import { CheckCircle2, AlertCircle, Send, CalendarCheck } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import { Reveal } from './Reveal';
 import { FloralDivider } from './Ornaments';
+import rsvpImage from '../../assets/pics/rsvp.jpg';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -76,7 +77,7 @@ export function RSVP() {
       id="rsvp"
       className="relative overflow-hidden bg-gradient-to-b from-royal-900 to-royal-950 py-24 text-gold-100 sm:py-32"
     >
-      <div className="pointer-events-none absolute inset-0 opacity-15 bg-cover-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1600')" }} />
+      <div className="pointer-events-none absolute inset-0 opacity-15 bg-cover-center" style={{ backgroundImage: `url('${rsvpImage}')` }} />
 
       <div className="relative mx-auto max-w-2xl px-6">
         <Reveal variant="fade" className="text-center">

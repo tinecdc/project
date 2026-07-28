@@ -5,6 +5,7 @@ const links = [
   { label: 'Home', href: '#home' },
   { label: 'Dress Code', href: '#dress-code' },
   { label: 'Venue', href: '#venue' },
+  { label: 'Photobook', href: '#photobook' },
   { label: 'FAQ', href: '#faq' },
   { label: 'RSVP', href: '#rsvp' },
 ];

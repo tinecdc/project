@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import coverImage from '../../assets/pics/cover.jpg';
 
 const EVENT_DATE = new Date('2026-09-12T17:00:00');
 
@@ -35,7 +36,7 @@ export function Hero() {
       id="home"
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden"
     >
-      <div className="absolute inset-0 bg-cover-center ken-burns" style={{ backgroundImage: "url('https://images.pexels.com/photos/3014853/pexels-photo-3014853.jpeg?auto=compress&cs=tinysrgb&w=1920')" }} />
+      <div className="absolute inset-0 bg-cover-center ken-burns" style={{ backgroundImage: `url('${coverImage}')` }} />
       <div className="absolute inset-0 bg-gradient-to-b from-royal-950/70 via-royal-900/55 to-royal-950/75" />
 
       <div className="relative z-10 flex flex-col items-center px-6 text-center text-gold-200">

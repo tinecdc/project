@@ -8,6 +8,7 @@ import { SnapAndShare } from '@/components/SnapAndShare';
 import { FAQ } from '@/components/FAQ';
 import { RSVP } from '@/components/RSVP';
 import { Footer } from '@/components/Footer';
+import { Photobook } from '@/components/Photobook';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <DressCode />
         <GiftGuide />
         <Venue />
+        <Photobook />
         <SnapAndShare />
         <FAQ />
         <RSVP />
