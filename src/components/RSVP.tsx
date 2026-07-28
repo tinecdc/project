@@ -83,7 +83,7 @@ export function RSVP() {
           <CalendarCheck size={30} className="mx-auto text-blush-300" />
           <h2 className="mt-4 font-script text-4xl text-cream-50 sm:text-5xl">RSVP</h2>
           <p className="mt-3 font-serif text-lg italic text-cream-100/80">
-            We are excited to celebrate Althea&rsquo;s 18th birthday with our closest
+            We are excited to celebrate Althea Rein&rsquo;s 18th birthday with our closest
             families and friends!
           </p>
         </Reveal>
@@ -92,7 +92,7 @@ export function RSVP() {
 
         <Reveal variant="up" delay={200}>
           <p className="mb-8 text-center text-sm uppercase tracking-widest text-cream-200/70">
-            The favor of a response is requested before February 10, 2026
+            The favor of a response is requested before August 30, 2026
           </p>
 
           <form onSubmit={submit} className="space-y-5 rounded-3xl border border-cream-200/15 bg-cream-50/5 p-6 backdrop-blur-sm sm:p-8">

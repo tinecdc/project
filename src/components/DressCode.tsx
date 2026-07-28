@@ -32,8 +32,7 @@ export function DressCode() {
                 Pastel or light colored long dress or gown.
               </p>
               <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-blush-500/20 px-4 py-2">
-                <span className="text-sm uppercase tracking-widest text-blush-200">except</span>
-                <span className="font-serif text-lg font-semibold text-cream-50">Pink</span>
+                <span className="text-sm uppercase tracking-widest text-blush-200">except Pink</span>
               </div>
             </div>
           </Reveal>

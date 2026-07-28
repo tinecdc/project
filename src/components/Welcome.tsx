@@ -66,7 +66,7 @@ export function Welcome() {
 
         <Reveal variant="up" delay={500}>
           <p className="mt-8 font-formal text-3xl text-burgundy-800">Love,</p>
-          <p className="font-script text-4xl text-blush-600">Althea</p>
+          <p className="font-script text-4xl text-blush-600">Althea Rein</p>
         </Reveal>
       </div>
     </section>

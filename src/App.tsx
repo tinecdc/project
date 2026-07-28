@@ -16,7 +16,7 @@ function App() {
       <main>
         <Hero />
         <Welcome />
-        <Story />
+        
         <DressCode />
         <GiftGuide />
         <Venue />
