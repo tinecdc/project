@@ -38,7 +38,7 @@ export function Navbar() {
         <button
           onClick={() => go('#home')}
           className={`font-formal text-2xl tracking-wide transition-colors ${
-            scrolled ? 'text-brown-800' : 'text-cream-50 text-shadow-soft'
+            scrolled ? 'text-[#966919]' : 'text-[#966919] text-shadow-soft'
           }`}
         >
           Althea Rein Turns 18
@@ -49,8 +49,8 @@ export function Navbar() {
             <li key={l.href}>
               <button
                 onClick={() => go(l.href)}
-                className={`text-xs uppercase tracking-widest transition-colors hover:text-gold-500 ${
-                  scrolled ? 'text-brown-700' : 'text-cream-50/90 text-shadow-soft'
+                className={`text-xs uppercase tracking-widest transition-colors hover:text-[#966919] ${
+                  scrolled ? 'text-[#966919]' : 'text-[#966919] text-shadow-soft'
                 }`}
               >
                 {l.label}
@@ -61,7 +61,7 @@ export function Navbar() {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className={`md:hidden ${scrolled ? 'text-brown-800' : 'text-cream-50'}`}
+          className={`md:hidden ${scrolled ? 'text-[#966919]' : 'text-[#966919]'}`}
           aria-label="Toggle menu"
         >
           {open ? <X size={24} /> : <Menu size={24} />}

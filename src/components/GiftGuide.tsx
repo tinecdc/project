@@ -9,7 +9,7 @@ export function GiftGuide() {
       <div className="relative mx-auto max-w-3xl px-6 text-center">
         <Reveal variant="fade">
           <Gift size={30} className="mx-auto text-gold-500" />
-          <h2 className="mt-4 font-script text-4xl text-brown-800 sm:text-5xl">Gift Guide</h2>
+          <h2 className="mt-4 font-script text-4xl text-gold-800 sm:text-5xl">Gift Guide</h2>
         </Reveal>
 
         <SmallDivider className="my-8" />

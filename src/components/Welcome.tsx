@@ -43,7 +43,7 @@ export function Welcome() {
         </Reveal>
 
         <Reveal variant="up" delay={200}>
-          <h2 className="mt-16 font-script text-4xl text-gold-600 sm:text-5xl">
+          <h2 className="mt-16 font-script text-4xl text-gold-500 sm:text-5xl">
             Welcome to my birthday website
           </h2>
         </Reveal>
@@ -51,7 +51,7 @@ export function Welcome() {
         <FloralDivider className="my-8" />
 
         <Reveal variant="up" delay={300}>
-          <div className="space-y-5 font-serif text-lg leading-relaxed text-brown-700 sm:text-xl">
+          <div className="space-y-5 font-serif text-lg leading-relaxed text-gold-200 sm:text-xl">
             <p>
               It is with joy and gratitude that I welcome you to my 18th birthday
               celebration. This milestone is a dream I've long awaited, and I feel
@@ -65,7 +65,7 @@ export function Welcome() {
         </Reveal>
 
         <Reveal variant="up" delay={500}>
-          <p className="mt-8 font-formal text-3xl text-brown-800">Love,</p>
+          <p className="mt-8 font-formal text-3xl text-brown-400">Love,</p>
           <p className="font-script text-4xl text-gold-600">Althea Rein</p>
         </Reveal>
       </div>
