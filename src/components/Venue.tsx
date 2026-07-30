@@ -8,7 +8,7 @@ export function Venue() {
       <div className="mx-auto max-w-6xl px-6">
         <Reveal variant="fade" className="text-center">
           <MapPin size={28} className="mx-auto text-gold-500" />
-          <h2 className="mt-4 font-script text-4xl text-brown-800 sm:text-5xl">The Venue</h2>
+          <h2 className="mt-4 font-script text-4xl text-[#80461B] sm:text-5xl">The Venue</h2>
         </Reveal>
 
         <FloralDivider className="my-10" />
@@ -33,13 +33,13 @@ export function Venue() {
           <Reveal variant="up" delay={200}>
             <div className="text-center md:text-left">
               <p className="text-xs uppercase tracking-[0.4em] text-gold-600">Celebrate with us at</p>
-              <h3 className="mt-3 font-display text-4xl tracking-wide text-brown-800 sm:text-5xl">
+              <h3 className="mt-3 font-display text-4xl tracking-wide text-[#80461B] sm:text-5xl">
                  LA CASA ROSALINA EVENTS PLACE
               </h3>
-              <p className="mt-4 font-serif text-xl leading-relaxed text-brown-700">
+              <p className="mt-4 font-serif text-xl leading-relaxed text-[#6E260E]">
                 J.P Rizal St., Poblacion, Pandi, Bulacan
               </p>
-              <p className="font-serif text-lg text-brown-600">Philippines</p>
+              <p className="font-serif text-lg text-[#6F4E37]">Philippines</p>
 
               <a
                 href="https://maps.app.goo.gl/RLpJYvZqBy2StYUf7"

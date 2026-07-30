@@ -38,7 +38,7 @@ export function Navbar() {
         <button
           onClick={() => go('#home')}
           className={`font-formal text-2xl tracking-wide transition-colors ${
-            scrolled ? 'text-[#966919]' : 'text-[#966919] text-shadow-soft'
+            scrolled ? 'text-[#80461B]' : 'text-[#80461B] text-shadow-soft'
           }`}
         >
           Althea Rein Turns 18
@@ -49,8 +49,8 @@ export function Navbar() {
             <li key={l.href}>
               <button
                 onClick={() => go(l.href)}
-                className={`text-xs uppercase tracking-widest transition-colors hover:text-[#966919] ${
-                  scrolled ? 'text-[#966919]' : 'text-[#966919] text-shadow-soft'
+                className={`text-xs uppercase tracking-widest transition-colors hover:text-[#6E260E] ${
+                  scrolled ? 'text-[#6E260E]' : 'text-[#80461B] text-shadow-soft'
                 }`}
               >
                 {l.label}
@@ -61,7 +61,7 @@ export function Navbar() {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className={`md:hidden ${scrolled ? 'text-[#966919]' : 'text-[#966919]'}`}
+          className={`md:hidden ${scrolled ? 'text-[#80461B]' : 'text-[#80461B]'}`}
           aria-label="Toggle menu"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -78,7 +78,7 @@ export function Navbar() {
             <li key={l.href}>
               <button
                 onClick={() => go(l.href)}
-                className="w-full rounded-lg px-4 py-3 text-left text-sm uppercase tracking-widest text-brown-700 hover:bg-gold-100/60"
+                className="w-full rounded-lg px-4 py-3 text-left text-sm uppercase tracking-widest text-[#6E260E] hover:bg-gold-100/60"
               >
                 {l.label}
               </button>

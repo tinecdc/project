@@ -30,7 +30,7 @@ export function FAQ() {
       <div className="mx-auto max-w-3xl px-6">
         <Reveal variant="fade" className="text-center">
           <HelpCircle size={28} className="mx-auto text-gold-500" />
-          <h2 className="mt-4 font-script text-4xl text-brown-800 sm:text-5xl">
+          <h2 className="mt-4 font-script text-4xl text-[#80461B] sm:text-5xl">
             Frequently Asked Questions
           </h2>
         </Reveal>
@@ -53,7 +53,7 @@ export function FAQ() {
                     onClick={() => setOpen(isOpen ? null : i)}
                     className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                   >
-                    <span className="font-serif text-lg font-medium text-brown-800 sm:text-xl">
+                    <span className="font-serif text-lg font-medium text-[#6E260E] sm:text-xl">
                       {item.q}
                     </span>
                     <ChevronDown
@@ -69,7 +69,7 @@ export function FAQ() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="px-6 pb-6 font-serif text-base leading-relaxed text-brown-700">
+                      <p className="px-6 pb-6 font-serif text-base leading-relaxed text-[#6F4E37]">
                         {item.a}
                       </p>
                     </div>

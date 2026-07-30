@@ -29,7 +29,7 @@ export function Welcome() {
           <p className="text-xs uppercase tracking-[0.4em] text-gold-600">Listen to my birthday song</p>
           <button
             onClick={toggle}
-            className="mx-auto mt-5 flex items-center gap-3 rounded-full border border-gold-400/50 bg-cream-50 px-6 py-3 text-brown-700 shadow-sm transition-all hover:border-gold-500 hover:shadow-md"
+            className="mx-auto mt-5 flex items-center gap-3 rounded-full border border-gold-400/50 bg-cream-50 px-6 py-3 text-[#6E260E] shadow-sm transition-all hover:border-gold-500 hover:shadow-md"
           >
             {playing ? <Pause size={18} /> : <Play size={18} />}
             <span className="text-sm tracking-wide">
@@ -65,7 +65,7 @@ export function Welcome() {
         </Reveal>
 
         <Reveal variant="up" delay={500}>
-          <p className="mt-8 font-formal text-3xl text-brown-400">Love,</p>
+          <p className="mt-8 font-formal text-3xl text-[#6F4E37]">Love,</p>
           <p className="font-script text-4xl text-gold-600">Althea Rein</p>
         </Reveal>
       </div>
