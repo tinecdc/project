@@ -29,7 +29,7 @@ export function DressCode() {
                 <h3 className="font-display text-2xl tracking-wide text-gold-100">Ladies</h3>
               </div>
               <p className="font-serif text-lg leading-relaxed text-gold-100">
-                Pastel or light colored long dress or gown.
+                Brown long dress or cocktail dress.
               </p>
               <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-gold-500/20 px-4 py-2">
                 <span className="text-sm uppercase tracking-widest text-gold-200">except Pink</span>
@@ -46,8 +46,7 @@ export function DressCode() {
                 <h3 className="font-display text-2xl tracking-wide text-gold-100">Gentlemen</h3>
               </div>
               <p className="font-serif text-lg leading-relaxed text-gold-100">
-                Any color of coat and tie, polo long or short sleeved, slacks or khaki &mdash;
-                or dark colored pants.
+               Gray suit, coat, or long sleeved-polo, and slacks.
               </p>
               <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-sage-400/20 px-4 py-2">
                 <span className="text-sm uppercase tracking-widest text-sage-200">kindly refrain from wearing denim pants</span>
