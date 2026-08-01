@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CheckCircle2, AlertCircle, Send, CalendarCheck } from 'lucide-react';
-import { supabase } from '@/lib/supabase';
+import { isSupabaseConfigured, supabase } from '@/lib/supabase';
+import { findInviteByLink, getStoredInviteCodes, normalizeInviteLink } from '@/lib/inviteCodes';
 import { Reveal } from './Reveal';
 import { FloralDivider } from './Ornaments';
 import rsvpImage from '../../assets/pics/rsvp.jpg';
@@ -10,30 +11,73 @@ type Status = 'idle' | 'submitting' | 'success' | 'error';
 export function RSVP() {
   const [form, setForm] = useState({
     name: '',
+    attendeeNames: '',
     email: '',
     phone: '',
     message: '',
     attending: true,
+    guestCount: 1,
   });
   const [status, setStatus] = useState<Status>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const [inviteLink, setInviteLink] = useState('');
+  const [inviteInfo, setInviteInfo] = useState<{ name: string; maxGuests: number } | null>(null);
+
+  useEffect(() => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+      const normalized = normalizeInviteLink(hash);
+      setInviteLink(normalized);
+      const matched = findInviteByLink(normalized);
+      setInviteInfo(matched ? { name: matched.name, maxGuests: matched.maxGuests } : null);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!inviteInfo) return;
+
+    setForm((current) => ({
+      ...current,
+      guestCount: Math.min(current.guestCount, inviteInfo.maxGuests),
+    }));
+  }, [inviteInfo]);
 
   const update = (key: keyof typeof form, value: string | boolean) => {
     setForm((f) => ({ ...f, [key]: value }));
   };
 
+  const handleInviteLinkChange = (value: string) => {
+    const normalized = normalizeInviteLink(value);
+    setInviteLink(normalized);
+    const matched = findInviteByLink(normalized);
+    setInviteInfo(matched ? { name: matched.name, maxGuests: matched.maxGuests } : null);
+  };
+
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim()) return;
+    if (inviteLink && inviteInfo && Number(form.guestCount) > inviteInfo.maxGuests) {
+      setStatus('error');
+      setErrorMsg(`This invite link allows up to ${inviteInfo.maxGuests} guest${inviteInfo.maxGuests === 1 ? '' : 's'}.`);
+      return;
+    }
+    if (!supabase) {
+      setStatus('error');
+      setErrorMsg('RSVP is currently unavailable because the form backend is not configured yet.');
+      return;
+    }
+
     setStatus('submitting');
     setErrorMsg('');
     try {
       const { error } = await supabase.from('rsvps').insert({
         name: form.name.trim(),
+        attendee_names: form.attendeeNames.trim() || null,
         email: form.email.trim(),
         phone: form.phone.trim() || null,
         message: form.message.trim() || null,
         attending: form.attending,
+        guest_count: Number(form.guestCount) || 1,
       });
       if (error) throw error;
       setStatus('success');
@@ -60,7 +104,7 @@ export function RSVP() {
             <button
               onClick={() => {
                 setStatus('idle');
-                setForm({ name: '', email: '', phone: '', message: '', attending: true });
+                setForm({ name: '', attendeeNames: '', email: '', phone: '', message: '', attending: true, guestCount: 1 });
               }}
               className="mt-8 rounded-full border border-gold-200/30 px-6 py-2.5 text-sm uppercase tracking-widest text-gold-100 transition-all hover:bg-royal-900/40"
             >
@@ -97,16 +141,29 @@ export function RSVP() {
           </p>
 
           <form onSubmit={submit} className="space-y-5 rounded-3xl border border-gold-200/15 bg-royal-950/20 p-6 backdrop-blur-sm sm:p-8">
-            <Field label="Name">
+            {!isSupabaseConfigured() && (
+              <div className="rounded-xl border border-gold-200/20 bg-cream-50/10 px-4 py-3 text-sm text-gold-100/90">
+                RSVP submissions are currently disabled until the database connection is configured.
+              </div>
+            )}
+
+            <Field label="Invite link">
               <input
                 type="text"
-                required
-                value={form.name}
-                onChange={(e) => update('name', e.target.value)}
-                placeholder="Your full name"
+                value={inviteLink}
+                onChange={(e) => handleInviteLinkChange(e.target.value)}
+                placeholder="Enter invite link"
                 className="form-input"
               />
             </Field>
+
+            {inviteInfo && (
+              <div className="rounded-xl border border-gold-200/20 bg-cream-50/10 px-4 py-3 text-sm text-gold-100/90">
+                Welcome, {inviteInfo.name}. You can bring up to {inviteInfo.maxGuests} guest{inviteInfo.maxGuests === 1 ? '' : 's'}.
+              </div>
+            )}
+
+          
 
             <div className="grid gap-5 sm:grid-cols-2">
               <Field label="Email">
@@ -140,23 +197,51 @@ export function RSVP() {
               />
             </Field>
 
-            <div>
-              <p className="mb-3 text-sm uppercase tracking-widest text-gold-100">
-                Are you attending?
-              </p>
-              <div className="grid grid-cols-2 gap-3">
-                <AttendOption
-                  active={form.attending === true}
-                  onClick={() => update('attending', true)}
-                  label="Yes, I'll be there."
-                />
-                <AttendOption
-                  active={form.attending === false}
-                  onClick={() => update('attending', false)}
-                  label="No, I can't make it."
-                />
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div>
+                <p className="mb-3 text-sm uppercase tracking-widest text-gold-100">
+                  Are you attending?
+                </p>
+                <div className="grid grid-cols-2 gap-3">
+                  <AttendOption
+                    active={form.attending === true}
+                    onClick={() => update('attending', true)}
+                    label="Yes, I'll be there."
+                  />
+                  <AttendOption
+                    active={form.attending === false}
+                    onClick={() => update('attending', false)}
+                    label="No, I can't make it."
+                  />
+                </div>
               </div>
+
+              <Field label="Guests">
+                <select
+                  value={form.guestCount}
+                  onChange={(e) => update('guestCount', Number(e.target.value))}
+                  className="form-input"
+                >
+                  {(inviteInfo ? Array.from({ length: inviteInfo.maxGuests }, (_, index) => index + 1) : [1, 2, 3, 4, 5, 6]).map((count) => (
+                    <option key={count} value={count}>
+                      {count}
+                    </option>
+                  ))}
+                </select>
+              </Field>
             </div>
+
+            {form.attending && (
+              <Field label="Attendee names">
+                <textarea
+                  value={form.attendeeNames}
+                  onChange={(e) => update('attendeeNames', e.target.value)}
+                  rows={3}
+                  placeholder="List each attendee name, one per line"
+                  className="form-input resize-none"
+                />
+              </Field>
+            )}
 
             {status === 'error' && (
               <div className="flex items-start gap-3 rounded-xl bg-red-900/40 px-4 py-3 text-sm text-red-100">

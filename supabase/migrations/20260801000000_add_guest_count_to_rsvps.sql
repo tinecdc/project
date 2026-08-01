@@ -1,0 +1,2 @@
+ALTER TABLE rsvps
+ADD COLUMN IF NOT EXISTS guest_count integer NOT NULL DEFAULT 1;
