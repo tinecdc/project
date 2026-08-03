@@ -13,7 +13,7 @@
 
 @layer components {
   .form-input {
-    @apply w-full rounded-xl border border-cream-200/20 bg-cream-50/10 px-4 py-3 font-serif text-base text-brown-900 placeholder:text-gold-300/70 outline-none transition-all;
+    @apply w-full rounded-xl border border-cream-200/20 bg-cream-50/10 px-4 py-3 font-serif text-base text-cream-50 placeholder:text-gold-300/70 outline-none transition-all;
   }
   .form-input:focus {
     @apply border-gold-300 bg-cream-50/15;

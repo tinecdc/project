@@ -8,18 +8,19 @@ import rsvpImage from '../../assets/pics/rsvp.jpg';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
+const googleSheetUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL?.trim();
+
 export function RSVP() {
   const [form, setForm] = useState({
     name: '',
-    attendeeNames: '',
     email: '',
     phone: '',
-    message: '',
-    attending: true,
-    guestCount: 1,
   });
+  const [attendeeInput, setAttendeeInput] = useState('');
+  const [attendeeNames, setAttendeeNames] = useState<string[]>([]);
   const [status, setStatus] = useState<Status>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const [sheetNotice, setSheetNotice] = useState('');
   const [inviteLink, setInviteLink] = useState('');
   const [inviteInfo, setInviteInfo] = useState<{ name: string; maxGuests: number } | null>(null);
 
@@ -33,16 +34,7 @@ export function RSVP() {
     }
   }, []);
 
-  useEffect(() => {
-    if (!inviteInfo) return;
-
-    setForm((current) => ({
-      ...current,
-      guestCount: Math.min(current.guestCount, inviteInfo.maxGuests),
-    }));
-  }, [inviteInfo]);
-
-  const update = (key: keyof typeof form, value: string | boolean) => {
+  const update = (key: keyof typeof form, value: string) => {
     setForm((f) => ({ ...f, [key]: value }));
   };
 
@@ -55,31 +47,62 @@ export function RSVP() {
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.name.trim() || !form.email.trim()) return;
-    if (inviteLink && inviteInfo && Number(form.guestCount) > inviteInfo.maxGuests) {
+
+    const name = form.name.trim();
+    const email = form.email.trim();
+    const phone = form.phone.trim();
+
+    if (!name || !email) return;
+
+    if (!supabase && !googleSheetUrl) {
       setStatus('error');
-      setErrorMsg(`This invite link allows up to ${inviteInfo.maxGuests} guest${inviteInfo.maxGuests === 1 ? '' : 's'}.`);
-      return;
-    }
-    if (!supabase) {
-      setStatus('error');
-      setErrorMsg('RSVP is currently unavailable because the form backend is not configured yet.');
+      setErrorMsg('RSVP is currently unavailable because no submission backend is configured yet.');
       return;
     }
 
     setStatus('submitting');
     setErrorMsg('');
+    setSheetNotice('');
+
+    const payload = {
+      name,
+      attendee_names: attendeeNames.length ? attendeeNames.join(', ') : null,
+      email,
+      phone: phone || null,
+    };
+
     try {
-      const { error } = await supabase.from('rsvps').insert({
-        name: form.name.trim(),
-        attendee_names: form.attendeeNames.trim() || null,
-        email: form.email.trim(),
-        phone: form.phone.trim() || null,
-        message: form.message.trim() || null,
-        attending: form.attending,
-        guest_count: Number(form.guestCount) || 1,
-      });
-      if (error) throw error;
+      if (supabase) {
+        try {
+          const { error } = await supabase.from('rsvps').insert(payload);
+          if (error) throw error;
+        } catch (supabaseError) {
+          console.warn('Supabase insert failed:', supabaseError);
+          setSheetNotice('Your RSVP was sent to the celebrant!');
+        }
+      }
+
+      if (googleSheetUrl) {
+        try {
+          const params = new URLSearchParams();
+          params.set('name', payload.name);
+          params.set('attendee_names', payload.attendee_names || '');
+          params.set('email', payload.email);
+          params.set('phone', payload.phone || '');
+
+          await fetch(googleSheetUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+            },
+            body: params.toString(),
+          });
+        } catch (sheetError) {
+          console.warn('Google Sheets sync failed:', sheetError);
+          setSheetNotice('Your RSVP was saved, but the Google Sheet export did not complete.');
+        }
+      }
+
       setStatus('success');
     } catch (err) {
       setStatus('error');
@@ -101,10 +124,16 @@ export function RSVP() {
               Thank you for informing us of your attendance!
             </p>
             <p className="mt-4 font-formal text-2xl text-gold-200">Althea Turns 18</p>
+            {sheetNotice && (
+              <p className="mt-4 text-sm text-gold-200/90">{sheetNotice}</p>
+            )}
             <button
               onClick={() => {
                 setStatus('idle');
-                setForm({ name: '', attendeeNames: '', email: '', phone: '', message: '', attending: true, guestCount: 1 });
+                setForm({ name: '', email: '', phone: '' });
+                setAttendeeInput('');
+                setAttendeeNames([]);
+                setSheetNotice('');
               }}
               className="mt-8 rounded-full border border-gold-200/30 px-6 py-2.5 text-sm uppercase tracking-widest text-gold-100 transition-all hover:bg-royal-900/40"
             >
@@ -147,16 +176,6 @@ export function RSVP() {
               </div>
             )}
 
-            <Field label="Invite link">
-              <input
-                type="text"
-                value={inviteLink}
-                onChange={(e) => handleInviteLinkChange(e.target.value)}
-                placeholder="Enter invite link"
-                className="form-input"
-              />
-            </Field>
-
             {inviteInfo && (
               <div className="rounded-xl border border-gold-200/20 bg-cream-50/10 px-4 py-3 text-sm text-gold-100/90">
                 Welcome, {inviteInfo.name}. You can bring up to {inviteInfo.maxGuests} guest{inviteInfo.maxGuests === 1 ? '' : 's'}.
@@ -164,6 +183,17 @@ export function RSVP() {
             )}
 
           
+
+            <Field label="Name">
+              <input
+                type="text"
+                required
+                value={form.name}
+                onChange={(e) => update('name', e.target.value)}
+                placeholder="Your full name"
+                className="form-input"
+              />
+            </Field>
 
             <div className="grid gap-5 sm:grid-cols-2">
               <Field label="Email">
@@ -187,61 +217,47 @@ export function RSVP() {
               </Field>
             </div>
 
-            <Field label="Message">
-              <textarea
-                value={form.message}
-                onChange={(e) => update('message', e.target.value)}
-                rows={3}
-                placeholder="A message for Althea..."
-                className="form-input resize-none"
-              />
-            </Field>
-
-            <div className="grid gap-5 sm:grid-cols-2">
-              <div>
-                <p className="mb-3 text-sm uppercase tracking-widest text-gold-100">
-                  Are you attending?
-                </p>
-                <div className="grid grid-cols-2 gap-3">
-                  <AttendOption
-                    active={form.attending === true}
-                    onClick={() => update('attending', true)}
-                    label="Yes, I'll be there."
+            <Field label="Attendee names">
+              <div className="flex flex-col gap-3">
+                <div className="flex gap-2">
+                  <input
+                    type="text"
+                    value={attendeeInput}
+                    onChange={(e) => setAttendeeInput(e.target.value)}
+                    placeholder="Enter one attendee name"
+                    className="form-input"
                   />
-                  <AttendOption
-                    active={form.attending === false}
-                    onClick={() => update('attending', false)}
-                    label="No, I can't make it."
-                  />
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const trimmed = attendeeInput.trim();
+                      if (!trimmed) return;
+                      setAttendeeNames((current) => [...current, trimmed]);
+                      setAttendeeInput('');
+                    }}
+                    className="rounded-full bg-gold-500 px-4 py-2 text-sm uppercase tracking-widest text-cream-50 transition-all hover:bg-gold-600"
+                  >
+                    Add
+                  </button>
                 </div>
+                {attendeeNames.length > 0 && (
+                  <ul className="rounded-xl border border-gold-200/20 bg-cream-50/10 p-3 text-sm text-gold-100/90">
+                    {attendeeNames.map((name, index) => (
+                      <li key={`${name}-${index}`} className="flex items-center justify-between py-1">
+                        <span>{name}</span>
+                        <button
+                          type="button"
+                          onClick={() => setAttendeeNames((current) => current.filter((_, i) => i !== index))}
+                          className="text-xs uppercase tracking-widest text-gold-300 hover:text-gold-200"
+                        >
+                          Remove
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
-
-              <Field label="Guests">
-                <select
-                  value={form.guestCount}
-                  onChange={(e) => update('guestCount', Number(e.target.value))}
-                  className="form-input"
-                >
-                  {(inviteInfo ? Array.from({ length: inviteInfo.maxGuests }, (_, index) => index + 1) : [1, 2, 3, 4, 5, 6]).map((count) => (
-                    <option key={count} value={count}>
-                      {count}
-                    </option>
-                  ))}
-                </select>
-              </Field>
-            </div>
-
-            {form.attending && (
-              <Field label="Attendee names">
-                <textarea
-                  value={form.attendeeNames}
-                  onChange={(e) => update('attendeeNames', e.target.value)}
-                  rows={3}
-                  placeholder="List each attendee name, one per line"
-                  className="form-input resize-none"
-                />
-              </Field>
-            )}
+            </Field>
 
             {status === 'error' && (
               <div className="flex items-start gap-3 rounded-xl bg-red-900/40 px-4 py-3 text-sm text-red-100">

@@ -5,7 +5,7 @@ import { Welcome } from '@/components/Welcome';
 import { DressCode } from '@/components/DressCode';
 import { GiftGuide } from '@/components/GiftGuide';
 import { Venue } from '@/components/Venue';
-import { SnapAndShare } from '@/components/SnapAndShare';
+import { Program } from '@/components/Program';
 import { FAQ } from '@/components/FAQ';
 import { RSVP } from '@/components/RSVP';
 import { Footer } from '@/components/Footer';
@@ -38,8 +38,8 @@ function App() {
         <DressCode />
         <GiftGuide />
         <Venue />
+        <Program />
         <Photobook />
-        <SnapAndShare />
         <FAQ />
         <RSVP />
       </main>

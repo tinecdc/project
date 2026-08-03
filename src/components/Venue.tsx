@@ -1,4 +1,5 @@
 import { MapPin, Navigation, Clock } from 'lucide-react';
+import venueImage from '../../assets/pics/venue.jpg';
 import { Reveal } from './Reveal';
 import { FloralDivider } from './Ornaments';
 
@@ -8,7 +9,7 @@ export function Venue() {
       <div className="mx-auto max-w-6xl px-6">
         <Reveal variant="fade" className="text-center">
           <MapPin size={28} className="mx-auto text-gold-500" />
-          <h2 className="mt-4 font-script text-4xl text-[#80461B] sm:text-5xl">The Venue</h2>
+          <h2 className="mt-4 font-script text-4xl text-gold-500 sm:text-5xl">The Venue</h2>
         </Reveal>
 
         <FloralDivider className="my-10" />
@@ -17,7 +18,7 @@ export function Venue() {
           <Reveal variant="scale">
             <div className="relative overflow-hidden rounded-3xl shadow-xl">
               <img
-                src="https://images.pexels.com/photos/1579739/pexels-photo-1579739.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src={venueImage}
                 alt="Bulacan, Philippines"
                 className="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105"
                 loading="lazy"
@@ -33,13 +34,13 @@ export function Venue() {
           <Reveal variant="up" delay={200}>
             <div className="text-center md:text-left">
               <p className="text-xs uppercase tracking-[0.4em] text-gold-600">Celebrate with us at</p>
-              <h3 className="mt-3 font-display text-4xl tracking-wide text-[#80461B] sm:text-5xl">
+              <h3 className="mt-3 font-display text-4xl tracking-wide text-gold-500 sm:text-5xl">
                  LA CASA ROSALINA EVENTS PLACE
               </h3>
-              <p className="mt-4 font-serif text-xl leading-relaxed text-[#6E260E]">
+              <p className="mt-4 font-serif text-xl leading-relaxed text-gold-200">
                 J.P Rizal St., Poblacion, Pandi, Bulacan
               </p>
-              <p className="font-serif text-lg text-[#6F4E37]">Philippines</p>
+              <p className="font-serif text-lg text-gold-200">Philippines</p>
 
               <a
                 href="https://maps.app.goo.gl/RLpJYvZqBy2StYUf7"

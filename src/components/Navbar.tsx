@@ -5,6 +5,7 @@ const links = [
   { label: 'Home', href: '#home' },
   { label: 'Dress Code', href: '#dress-code' },
   { label: 'Venue', href: '#venue' },
+  { label: 'Program', href: '#program' },
   { label: 'Photobook', href: '#photobook' },
   { label: 'FAQ', href: '#faq' },
   { label: 'RSVP', href: '#rsvp' },
@@ -38,7 +39,7 @@ export function Navbar() {
         <button
           onClick={() => go('#home')}
           className={`font-formal text-2xl tracking-wide transition-colors ${
-            scrolled ? 'text-[#80461B]' : 'text-[#80461B] text-shadow-soft'
+            scrolled ? 'text-gold-500' : 'text-gold-500 text-shadow-soft'
           }`}
         >
           Althea Rein Turns 18
@@ -49,8 +50,8 @@ export function Navbar() {
             <li key={l.href}>
               <button
                 onClick={() => go(l.href)}
-                className={`text-xs uppercase tracking-widest transition-colors hover:text-[#6E260E] ${
-                  scrolled ? 'text-[#6E260E]' : 'text-[#80461B] text-shadow-soft'
+                className={`text-xs uppercase tracking-widest transition-colors hover:text-gold-500 ${
+                  scrolled ? 'text-gold-500' : 'text-gold-500 text-shadow-soft'
                 }`}
               >
                 {l.label}

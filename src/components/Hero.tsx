@@ -45,7 +45,8 @@ export function Hero() {
         </p>
 
         <h1 className="reveal-scale in-view mt-6 font-formal text-6xl leading-none text-shadow-deep sm:text-7xl md:text-8xl" style={{ animationDelay: '400ms' }}>
-          Althea Rein
+          Althea Rein+
+            
         </h1>
         <p className="reveal-fade in-view mt-3 font-script text-3xl text-gold-300 sm:text-4xl md:text-5xl" style={{ animationDelay: '700ms' }}>
           turns 18

@@ -30,7 +30,7 @@ export function FAQ() {
       <div className="mx-auto max-w-3xl px-6">
         <Reveal variant="fade" className="text-center">
           <HelpCircle size={28} className="mx-auto text-gold-500" />
-          <h2 className="mt-4 font-script text-4xl text-[#80461B] sm:text-5xl">
+          <h2 className="mt-4 font-script text-4xl text-gold-500 sm:text-5xl">
             Frequently Asked Questions
           </h2>
         </Reveal>

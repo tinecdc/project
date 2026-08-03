@@ -9,13 +9,13 @@ export function GiftGuide() {
       <div className="relative mx-auto max-w-3xl px-6 text-center">
         <Reveal variant="fade">
           <Gift size={30} className="mx-auto text-gold-500" />
-          <h2 className="mt-4 font-script text-4xl text-[#80461B] sm:text-5xl">Gift Guide</h2>
+          <h2 className="mt-4 font-script text-4xl text-gold-500 sm:text-5xl">Gift Guide</h2>
         </Reveal>
 
         <SmallDivider className="my-8" />
 
         <Reveal variant="up" delay={200}>
-          <p className="font-serif text-xl italic leading-relaxed text-[#6E260E]">
+          <p className="font-serif text-xl italic leading-relaxed text-gold-200">
             With everything I have, I feel truly blessed.
           </p>
         </Reveal>
@@ -26,16 +26,16 @@ export function GiftGuide() {
               <span className="mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full bg-gold-100 text-gold-600">
                 <Heart size={20} />
               </span>
-              <p className="font-serif text-lg leading-relaxed text-[#6F4E37]">
+              <p className="font-serif text-lg leading-relaxed text-gold-200">
                 Your presence and prayers are all I wish for on this special day.
               </p>
             </div>
 
             <div className="flex items-start gap-4 rounded-2xl bg-cream-50 p-6 text-left shadow-sm">
-              <span className="mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full bg-cream-300 text-[#6E260E]">
+              <span className="mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full bg-cream-300 text-gold-600">
                 <Wallet size={20} />
               </span>
-              <p className="font-serif text-lg leading-relaxed text-[#6F4E37]">
+              <p className="font-serif text-lg leading-relaxed text-gold-200">
                 But if you&rsquo;d still like to give a little something, a monetary gift to
                 help build my future would be deeply appreciated.
               </p>
