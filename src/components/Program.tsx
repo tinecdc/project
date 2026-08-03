@@ -5,8 +5,8 @@ const programs = [
   {
     title: '18 Roses',
     people: [
-      'Lolo Femeng Miranda',  'Papa Roldan Lucena', 'Ninong Eric Natividad', 'Ninong Jojo Cu','Tito Jun Cu','Kuya Lawrence Cu', 'Kuya Paolo Garcia', 'Kuya Jam Dela Fuente', 'Kuya Carlos Labayno'
-      ,'Kuya Rafael Panganiban', 'Jerriel Ochoco', 'Franz Tapang', 'Seung Hyun Kim', 'Giro Nolan', 'Domingo Hernandez Jr.','Jared Reyes','Floyd Urrutia',  'Daddy Jorge Miranda',
+      'Femeng Miranda',  'Roldan Lucena', 'Eric Natividad', 'Reynante Cu','Jun Cu','Lawrence Cu', 'Paolo Garcia', 'Jam Dela Fuente', 'Carlos Labayno'
+      ,'Rafael Panganiban', 'Jerriel Ochoco', 'Franz Tapang', 'Seung Hyun Kim', 'Giro Nolan', 'Domingo Hernandez Jr.','Jared Reyes','Floyd Urrutia',  'Daddy Jorge Miranda',
     ],
   },
   {
@@ -27,14 +27,14 @@ const programs = [
     title: '18 Candles',
     people: [
        'test','test', 'test', 'Anne Princess Obaniana', 'Alexandra Cu', 'Mhae Dabu-Garcia', 'Fatima Garcia-Panganiban', 'Destine Natividad', 'Elisha Lumba', 'Ysabelle Lumba',
-      'Rachel Cu', 'Samantha Dela Fuente', 'Zerina Dela Cruz', 'Christine Dela Cruz', 'Angelika Dela Cruz', 'Anya Rayein Miranda', 'Athena Ray Miranda', 'Mommy Cristina Miranda',
+      'Rachel Cu', 'Samantha Dela Fuente', 'Zerina Dela Cruz', 'Christine Dela Cruz', 'Angelika Dela Cruz', 'Anya Rayein Miranda', 'Athena Ray Miranda', 'Cristina Miranda',
     ],
   },
   {
     title: '18 Wishes',
     people: [
-      'test', 'Sir Clarence Felomino', 'Ma’am Ninna Castro', 'Ma’am Jasmin Critica', 'Mr. Alfonso Victor Castro', 'test', 'test', 'Ninang Jhenna Aurelio', 'Kuya John Persian Cu',
-      'Ninang Josephine De Guzman', 'Ninang Beth Mallari', 'Lola Vicky Robles', 'Ninang Liza Gamboa', 'Tita Pie Cu', 'Lola Fely Gamboa', 'Tita Noemi Garcia', 'Tita Carlota Miranda', 'Ninang Grace Dela Fuente',
+      'test', 'Clarence Felomino', 'Ninna Castro', 'Jasmin Critica', 'Alfonso Victor Castro', 'test', 'test', 'Jhenna Aurelio', 'John Persian Cu',
+      'Josephine De Guzman', 'Beth Mallari', 'Vicky Robles', 'Liza Gamboa', 'Pie Cu', 'Fely Gamboa', 'Noemi Garcia', 'Carlota Miranda', 'Grace Dela Fuente',
     ],
   },
 ];
@@ -66,22 +66,16 @@ export function Program() {
           </p>
         </Reveal>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          {programs.map((program, index) => {
-            const isWishes = program.title === '18 Wishes';
-
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          {programs.slice(0, 4).map((program, index) => {
             return (
               <Reveal key={program.title} variant="up" delay={260 + index * 90}>
-                <div
-                  className={`rounded-3xl border border-gold-400/30 bg-royal-900/70 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.2)] backdrop-blur ${
-                    isWishes ? 'lg:col-span-2' : ''
-                  }`}
-                >
+                <div className="rounded-3xl border border-gold-400/30 bg-royal-900/70 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.2)] backdrop-blur">
                   <p className="text-center text-sm uppercase tracking-[0.3em] text-gold-500">
                     {program.title}
                   </p>
-                  <div className={`mt-5 ${isWishes ? 'mx-auto max-w-3xl' : ''}`}>
-                    <div className={`grid gap-2 ${isWishes ? 'sm:grid-cols-2' : 'sm:grid-cols-2'}`}>
+                  <div className="mt-5">
+                    <div className="grid gap-2 sm:grid-cols-2">
                       <div className="space-y-2">
                         {program.people
                           .filter((person) => person.trim().length > 0)
@@ -107,6 +101,50 @@ export function Program() {
                               {person}
                             </div>
                           ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            );
+          })}
+
+          {programs.slice(4).map((program, index) => {
+            return (
+              <Reveal key={program.title} variant="up" delay={260 + 4 * 90 + index * 90}>
+                <div className="md:col-span-2 flex justify-center">
+                  <div className="mx-auto w-full rounded-3xl border border-gold-400/30 bg-royal-900/70 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.2)] backdrop-blur md:max-w-3xl">
+                    <p className="text-center text-sm uppercase tracking-[0.3em] text-gold-500">
+                      {program.title}
+                    </p>
+                    <div className="mt-5">
+                      <div className="grid gap-2 sm:grid-cols-2">
+                        <div className="space-y-2">
+                          {program.people
+                            .filter((person) => person.trim().length > 0)
+                            .slice(0, 9)
+                            .map((person) => (
+                              <div
+                                key={person}
+                                className="rounded-2xl border border-gold-400/20 bg-royal-950/60 px-3 py-2 text-center text-sm text-gold-200"
+                              >
+                                {person}
+                              </div>
+                            ))}
+                        </div>
+                        <div className="space-y-2">
+                          {program.people
+                            .filter((person) => person.trim().length > 0)
+                            .slice(9)
+                            .map((person) => (
+                              <div
+                                key={person}
+                                className="rounded-2xl border border-gold-400/20 bg-royal-950/60 px-3 py-2 text-center text-sm text-gold-200"
+                              >
+                                {person}
+                              </div>
+                            ))}
+                        </div>
                       </div>
                     </div>
                   </div>

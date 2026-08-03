@@ -90,7 +90,7 @@
     transform: scale(1) translate(0, 0);
   }
   100% {
-    transform: scale(1.12) translate(-1.5%, -1.5%);
+    transform: scale(1.04) translate(-0.75%, -0.75%);
   }
 }
 

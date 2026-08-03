@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, LucideHeading3 } from 'lucide-react';
 import coverImage from '../../assets/pics/cover.jpg';
 
 const EVENT_DATE = new Date('2026-09-12T17:00:00');
@@ -45,9 +45,16 @@ export function Hero() {
         </p>
 
         <h1 className="reveal-scale in-view mt-6 font-formal text-6xl leading-none text-shadow-deep sm:text-7xl md:text-8xl" style={{ animationDelay: '400ms' }}>
-          Althea Rein+
+          Althea Rein
+            
             
         </h1>
+
+        <p className="reveal-scale in-view mt-6 font-formal text-1xl leading-none text-shadow-deep sm:text-1xl md:text-1xl" style={{ animationDelay: '400ms' }}>
+          as she
+            
+            
+        </p>
         <p className="reveal-fade in-view mt-3 font-script text-3xl text-gold-300 sm:text-4xl md:text-5xl" style={{ animationDelay: '700ms' }}>
           turns 18
         </p>

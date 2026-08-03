@@ -8,7 +8,10 @@ export function DressCode() {
       id="dress-code"
       className="relative overflow-hidden bg-gradient-to-b from-royal-900 to-royal-950 py-24 text-cream-100 sm:py-32"
     >
-      <div className="pointer-events-none absolute inset-0 opacity-20 bg-cover-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/3014853/pexels-photo-3014853.jpeg?auto=compress&cs=tinysrgb&w=1600')" }} />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-20 bg-cover-center"
+        style={{ backgroundImage: "url('/assets/pics/dresscode.jpg')" }}
+      />
 
       <div className="relative mx-auto max-w-5xl px-6">
         <Reveal variant="fade" className="text-center">

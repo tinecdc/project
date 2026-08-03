@@ -26,7 +26,7 @@ export function GiftGuide() {
               <span className="mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full bg-gold-100 text-gold-600">
                 <Heart size={20} />
               </span>
-              <p className="font-serif text-lg leading-relaxed text-gold-200">
+              <p className="font-serif text-lg leading-relaxed text-gold-400">
                 Your presence and prayers are all I wish for on this special day.
               </p>
             </div>
@@ -35,7 +35,7 @@ export function GiftGuide() {
               <span className="mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full bg-cream-300 text-gold-600">
                 <Wallet size={20} />
               </span>
-              <p className="font-serif text-lg leading-relaxed text-gold-200">
+              <p className="font-serif text-lg leading-relaxed text-gold-400">
                 But if you&rsquo;d still like to give a little something, a monetary gift to
                 help build my future would be deeply appreciated.
               </p>

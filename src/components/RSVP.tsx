@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import { CheckCircle2, AlertCircle, Send, CalendarCheck } from 'lucide-react';
-import { isSupabaseConfigured, supabase } from '@/lib/supabase';
-import { findInviteByLink, getStoredInviteCodes, normalizeInviteLink } from '@/lib/inviteCodes';
+import { supabase } from '@/lib/supabase';
+import { findInviteByLink, normalizeInviteLink } from '@/lib/inviteCodes';
 import { Reveal } from './Reveal';
 import { FloralDivider } from './Ornaments';
 import rsvpImage from '../../assets/pics/rsvp.jpg';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
-const googleSheetUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL?.trim();
+const googleSheetUrl = 'https://script.google.com/macros/s/AKfycbymmbmuB0Y-a2K7Zhde7IKYZrn4VQ-WqPV-5ilpPgWiS0MLQcjEvuyTu0mZ6pbRo0uekA/exec';
 
 export function RSVP() {
   const [form, setForm] = useState({
@@ -54,12 +54,6 @@ export function RSVP() {
 
     if (!name || !email) return;
 
-    if (!supabase && !googleSheetUrl) {
-      setStatus('error');
-      setErrorMsg('RSVP is currently unavailable because no submission backend is configured yet.');
-      return;
-    }
-
     setStatus('submitting');
     setErrorMsg('');
     setSheetNotice('');
@@ -78,8 +72,19 @@ export function RSVP() {
           if (error) throw error;
         } catch (supabaseError) {
           console.warn('Supabase insert failed:', supabaseError);
-          setSheetNotice('Your RSVP was sent to the celebrant!');
+          setSheetNotice('Your RSVP was saved locally on this device while the live backend is unavailable.');
         }
+      }
+
+      if (typeof window !== 'undefined') {
+        const stored = window.localStorage.getItem('althea-rsvp-responses');
+        const responses = stored ? JSON.parse(stored) : [];
+        responses.push({
+          ...payload,
+          createdAt: new Date().toISOString(),
+          inviteLink: inviteLink || null,
+        });
+        window.localStorage.setItem('althea-rsvp-responses', JSON.stringify(responses));
       }
 
       if (googleSheetUrl) {
@@ -170,11 +175,7 @@ export function RSVP() {
           </p>
 
           <form onSubmit={submit} className="space-y-5 rounded-3xl border border-gold-200/15 bg-royal-950/20 p-6 backdrop-blur-sm sm:p-8">
-            {!isSupabaseConfigured() && (
-              <div className="rounded-xl border border-gold-200/20 bg-cream-50/10 px-4 py-3 text-sm text-gold-100/90">
-                RSVP submissions are currently disabled until the database connection is configured.
-              </div>
-            )}
+
 
             {inviteInfo && (
               <div className="rounded-xl border border-gold-200/20 bg-cream-50/10 px-4 py-3 text-sm text-gold-100/90">
@@ -240,6 +241,9 @@ export function RSVP() {
                     Add
                   </button>
                 </div>
+                <p className="text-xs uppercase tracking-[0.2em] text-gold-200/80">
+                  Don’t forget to click the Add button after typing each attendee name.
+                </p>
                 {attendeeNames.length > 0 && (
                   <ul className="rounded-xl border border-gold-200/20 bg-cream-50/10 p-3 text-sm text-gold-100/90">
                     {attendeeNames.map((name, index) => (

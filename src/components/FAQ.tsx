@@ -6,11 +6,11 @@ import { FloralDivider } from './Ornaments';
 const faqs = [
   {
     q: 'RSVP',
-    a: 'Your RSVP allows us to finalize guest arrangements, including seating and catering, to ensure everyone enjoys a memorable evening. Kindly confirm your attendance on or before February 10, 2026.',
+    a: 'Your RSVP allows us to finalize guest arrangements, including seating and catering, to ensure everyone enjoys a memorable evening. Kindly confirm your attendance on or before August 30, 2026.',
   },
   {
     q: 'Is there parking space available for my car?',
-    a: 'Available on a first-come, first-served basis. We do not reserve parking spaces. Guests will receive parking tickets upon arrival. A flat rate parking fee of 50 pesos applies. Please inform the guards on duty that you are a client from Terrasse MNL which is located at M1 Level.',
+    a: 'Available on a first-come, first-served basis. We do not reserve parking spaces.',
   },
   {
     q: 'May I invite a "plus one" to the event?',
