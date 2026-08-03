@@ -35,9 +35,6 @@ export function DressCode() {
               <p className="font-serif text-lg leading-relaxed text-gold-100">
                 Brown long dress or cocktail dress.
               </p>
-              <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-gold-500/20 px-4 py-2">
-                <span className="text-sm uppercase tracking-widest text-gold-200">except Pink</span>
-              </div>
             </div>
           </Reveal>
 
