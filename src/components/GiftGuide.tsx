@@ -1,6 +1,7 @@
 import { Gift, Heart, Wallet } from 'lucide-react';
 import { Reveal } from './Reveal';
 import { SmallDivider } from './Ornaments';
+import wishlistQrImage from '../../assets/pics/wishlistqr.png';
 
 export function GiftGuide() {
   return (
@@ -39,6 +40,19 @@ export function GiftGuide() {
                 But if you&rsquo;d still like to give a little something, a monetary gift to
                 help build my future would be deeply appreciated.
               </p>
+            </div>
+
+            <div className="rounded-2xl border border-gold-200/30 bg-cream-50/90 p-6 shadow-sm">
+              <p className="font-serif text-lg leading-relaxed text-gold-500">
+                Wishlist QR code
+              </p>
+              <div className="mt-4 flex justify-center">
+                <img
+                  src={wishlistQrImage}
+                  alt="Wishlist QR code"
+                  className="h-48 w-48 rounded-2xl object-contain shadow-md"
+                />
+              </div>
             </div>
           </div>
         </Reveal>

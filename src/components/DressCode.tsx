@@ -1,6 +1,7 @@
 import { Reveal } from './Reveal';
 import { FloralDivider } from './Ornaments';
 import { Sparkles, User, Users } from 'lucide-react';
+import dresscodeImage from '../../assets/pics/dresscode.jpg';
 
 export function DressCode() {
   return (
@@ -10,7 +11,7 @@ export function DressCode() {
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-20 bg-cover-center"
-        style={{ backgroundImage: "url('/assets/pics/dresscode.jpg')" }}
+        style={{ backgroundImage: `url('${dresscodeImage}')` }}
       />
 
       <div className="relative mx-auto max-w-5xl px-6">
