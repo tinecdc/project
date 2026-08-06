@@ -13,7 +13,7 @@ const programs = [
     title: '18 Shots',
     people: [
       'Ms. Moira Okutumo', 'test', 'Mr. Camherzon Osiones', 'Mr. Kevin Dela Vega', 'Ms. Louie Lopez', 'Ms. Pauleen Inocentes', 'Mr. Siegfried Mariano', 'Mr. Youli Santiago', 'Ms. Iya Mendoza',
-       'Mr. Migz Valimento', 'Ms. Heather Trinidad', 'Ms. Dhyana Estrella', 'Mr. PJ Cruz', 'Ms. Charlene Peralta', 'Ms. Camilla Celestino', 'Ms. Mariel Mauricio', 'test', 'Mr. Gaib Galvez'
+       'Mr. Migz Valimento', 'Ms. Heather Trinidad', 'Ms. Dhyana Estrella', 'Ms. PJ Cruz', 'Ms. Charlene Peralta', 'Ms. Camilla Celestino', 'Ms. Mariel Mauricio', 'test', 'Mr. Gaib Galvez'
     ],
   },
   {
