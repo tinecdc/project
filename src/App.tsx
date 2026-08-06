@@ -34,12 +34,11 @@ function App() {
       <main>
         <Hero />
         <Welcome />
-
-        <DressCode />
-        <GiftGuide />
-        <Venue />
         <Program />
+        <DressCode />
         <Photobook />
+        <Venue />
+        <GiftGuide />
         <FAQ />
         <RSVP />
       </main>

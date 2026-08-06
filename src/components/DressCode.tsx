@@ -19,6 +19,8 @@ export function DressCode() {
           <Sparkles size={28} className="mx-auto text-gold-300" />
           <h2 className="mt-4 font-script text-4xl text-gold-100 sm:text-5xl">Dress Code</h2>
           <p className="mt-2 text-xs uppercase tracking-[0.4em] text-gold-200">For our guests</p>
+
+          
         </Reveal>
 
         <FloralDivider className="my-10" />
@@ -33,7 +35,7 @@ export function DressCode() {
                 <h3 className="font-display text-2xl tracking-wide text-gold-100">Ladies</h3>
               </div>
               <p className="font-serif text-lg leading-relaxed text-gold-100">
-                Black, Brown or Gray long dress or cocktail dress.
+                Evening gown, cocktail dress, or semi-formal maxi dress.
               </p>
             </div>
           </Reveal>
@@ -47,13 +49,19 @@ export function DressCode() {
                 <h3 className="font-display text-2xl tracking-wide text-gold-100">Gentlemen</h3>
               </div>
               <p className="font-serif text-lg leading-relaxed text-gold-100">
-              Black,Brown or Gray suit, coat, or long sleeved-polo, and slacks.
+               Suit, tuxedo, or formal polo with slacks. Kindly refrain from wearing denim pants.
               </p>
-              <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-sage-400/20 px-4 py-2">
-                <span className="text-sm uppercase tracking-widest text-sage-200">kindly refrain from wearing denim pants</span>
-                <span className="font-serif text-lg font-semibold text-cream-50"></span>
-              </div>
+              
             </div>
+
+            <div className="mx-auto mt-6 inline-flex items-center gap-3 rounded-2xl border border-gold-300/20 bg-cream-50/10 px-4 py-3 backdrop-blur-sm">
+            <div className="flex items-center gap-1">
+              <span className="h-4 w-4 rounded-sm bg-amber-900" />
+              <span className="h-4 w-4 rounded-sm bg-stone-500" />
+              <span className="h-4 w-4 rounded-sm bg-stone-300" />
+            </div>
+            <span className="text-xs uppercase tracking-[0.3em] text-gold-100">Brown & Gray</span>
+          </div>
           </Reveal>
         </div>
       </div>
