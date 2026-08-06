@@ -1,7 +1,7 @@
 import { Reveal } from './Reveal';
 import { FloralDivider } from './Ornaments';
 import { Sparkles, User, Users } from 'lucide-react';
-import dresscodeImage from '../../assets/pics/dresscode.jpg';
+import dresscodeImage from '../../assets/pics/dresscode1.jpg';
 
 export function DressCode() {
   return (
@@ -53,16 +53,17 @@ export function DressCode() {
               </p>
               
             </div>
-
-            <div className="mx-auto mt-6 inline-flex items-center gap-3 rounded-2xl border border-gold-300/20 bg-cream-50/10 px-4 py-3 backdrop-blur-sm">
-            <div className="flex items-center gap-1">
-              <span className="h-4 w-4 rounded-sm bg-amber-900" />
-              <span className="h-4 w-4 rounded-sm bg-stone-500" />
-              <span className="h-4 w-4 rounded-sm bg-stone-300" />
-            </div>
-            <span className="text-xs uppercase tracking-[0.3em] text-gold-100">Brown & Gray</span>
-          </div>
           </Reveal>
+        </div>
+
+        <div className="mx-auto mt-8 flex w-fit items-center justify-center gap-3 rounded-2xl border border-gold-300/20 bg-cream-50/10 px-4 py-3 backdrop-blur-sm">
+          <div className="flex items-center gap-1">
+            <span className="h-4 w-4 rounded-sm border border-white/20" style={{ backgroundColor: '#6F4E37' }} />
+            <span className="h-4 w-4 rounded-sm border border-white/20" style={{ backgroundColor: '#80461B' }} />
+            <span className="h-4 w-4 rounded-sm border border-white/20" style={{ backgroundColor: '#848884' }} />
+            <span className="h-4 w-4 rounded-sm border border-white/20" style={{ backgroundColor: '#000000' }} />
+          </div>
+          <span className="text-xs uppercase tracking-[0.3em] text-gold-100">Brown & Gray</span>
         </div>
       </div>
     </section>

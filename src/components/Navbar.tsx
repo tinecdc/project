@@ -3,10 +3,10 @@ import { Menu, X } from 'lucide-react';
 
 const links = [
   { label: 'Home', href: '#home' },
+   { label: 'Program', href: '#program' },
   { label: 'Dress Code', href: '#dress-code' },
   { label: 'Venue', href: '#venue' },
-  { label: 'Program', href: '#program' },
-  { label: 'Photobook', href: '#photobook' },
+  { label: 'Photo Gallery', href: '#photobook' },
   { label: 'FAQ', href: '#faq' },
   { label: 'RSVP', href: '#rsvp' },
 ];

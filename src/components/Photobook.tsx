@@ -33,7 +33,7 @@ export function Photobook() {
       <div className="mx-auto max-w-6xl px-6">
         <Reveal variant="fade" className="text-center">
           <BookOpen size={28} className="mx-auto text-[#6E260E]" />
-          <h2 className="mt-4 font-script text-4xl text-[#80461B] sm:text-5xl">Photobook</h2>
+          <h2 className="mt-4 font-script text-4xl text-[#80461B] sm:text-5xl">Photo Gallery</h2>
           <p className="mt-2 text-sm uppercase tracking-widest text-[#6F4E37]">
             A keepsake of the pre-debut shoot
           </p>
