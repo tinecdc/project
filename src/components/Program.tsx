@@ -41,11 +41,9 @@ const programs = [
 
 export function Program() {
   return (
-    <section id="program" className="relative overflow-hidden bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.18),transparent_40%),linear-gradient(135deg,#07111f_0%,#0e1a2f_45%,#030814_100%)] py-24 sm:py-32">
-      <div className="pointer-events-none absolute left-0 top-0 h-72 w-72 rounded-full bg-gold-400/10 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-0 right-0 h-72 w-72 rounded-full bg-cream-100/10 blur-3xl" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-300/70 to-transparent" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold-300/40 to-transparent" />
+    <section id="program" className="relative overflow-hidden bg-[#07111f] py-24 sm:py-32">
+      <div className="pointer-events-none absolute left-0 top-0 h-64 w-64 rounded-full bg-gold-400/8 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-0 right-0 h-64 w-64 rounded-full bg-cream-100/8 blur-3xl" />
 
       <div className="relative mx-auto max-w-6xl px-6">
         <Reveal variant="fade">
@@ -55,27 +53,24 @@ export function Program() {
         </Reveal>
 
         <Reveal variant="up" delay={120}>
-          <h2 className="mt-4 text-center font-script text-4xl text-gold-500 drop-shadow-[0_0_20px_rgba(212,175,55,0.25)] sm:text-5xl">
+          <h2 className="mt-4 text-center font-script text-4xl text-gold-500 sm:text-5xl">
             People in the Program
           </h2>
         </Reveal>
 
         <FloralDivider className="my-8" />
 
-        <Reveal variant="up" delay={220}>
-          <p className="mx-auto max-w-2xl text-center font-serif text-lg leading-relaxed text-gold-200 sm:text-xl">
-            //
-          </p>
-        </Reveal>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {programs.slice(0, 4).map((program, index) => {
             return (
               <Reveal key={program.title} variant="up" delay={260 + index * 90}>
-                <div className="group relative overflow-hidden rounded-[2rem] border border-gold-300/40 bg-[linear-gradient(135deg,rgba(18,31,58,0.95),rgba(38,53,85,0.92),rgba(8,18,35,0.98))] p-6 shadow-[0_0_45px_rgba(212,175,55,0.18)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(212,175,55,0.24)]">
-                  <div className="pointer-events-none absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.25),transparent_35%),linear-gradient(120deg,rgba(255,215,0,0.16),transparent_40%,rgba(255,255,255,0.08),transparent_80%)]" />
-                  <div className="pointer-events-none absolute -top-10 left-1/2 h-24 w-24 -translate-x-1/2 rounded-full bg-gold-300/20 blur-3xl transition-all duration-300 group-hover:scale-110" />
-                  <p className="relative z-10 inline-flex w-full justify-center rounded-full border border-gold-300/30 bg-[linear-gradient(90deg,rgba(255,215,0,0.18),rgba(255,255,255,0.04),rgba(255,215,0,0.18))] px-4 py-2 text-center text-sm uppercase tracking-[0.35em] text-gold-500 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]">
+                <div className="relative overflow-hidden rounded-[1.5rem] border border-gold-400/20 bg-[#0d1830] p-6 shadow-[0_8px_24px_rgba(0,0,0,0.2)]">
+                  <div className="pointer-events-none absolute inset-0 rounded-[1.5rem] border border-white/5" />
+                  <div className="pointer-events-none absolute -right-2 top-3 h-3 w-3 rounded-full bg-gold-300/80 blur-[1px]" />
+                  <div className="pointer-events-none absolute right-6 top-2 h-2 w-2 rounded-full bg-cream-100/70" />
+                  <div className="pointer-events-none absolute left-4 top-5 h-1.5 w-1.5 rounded-full bg-gold-200/70" />
+                  <p className="relative z-10 text-center text-sm uppercase tracking-[0.35em] text-gold-500">
                     {program.title}
                   </p>
                   <div className="mt-5">
@@ -87,7 +82,7 @@ export function Program() {
                           .map((person) => (
                             <div
                               key={person}
-                              className="rounded-2xl border border-gold-400/20 bg-gradient-to-r from-royal-950/80 via-royal-900/70 to-royal-950/80 px-3 py-2 text-center text-sm text-gold-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-200 hover:-translate-y-0.5 hover:border-gold-300/50 hover:text-gold-100"
+                              className="rounded-2xl border border-gold-400/20 bg-[#101b35] px-3 py-2 text-center text-sm text-gold-200"
                             >
                               {person}
                             </div>
@@ -117,10 +112,12 @@ export function Program() {
             return (
               <Reveal key={program.title} variant="up" delay={260 + 4 * 90 + index * 90}>
                 <div className="md:col-span-2 flex justify-center">
-                  <div className="group relative mx-auto w-full overflow-hidden rounded-[2rem] border border-gold-300/40 bg-[linear-gradient(135deg,rgba(18,31,58,0.95),rgba(38,53,85,0.92),rgba(8,18,35,0.98))] p-6 shadow-[0_0_45px_rgba(212,175,55,0.18)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(212,175,55,0.24)] md:max-w-3xl">
-                    <div className="pointer-events-none absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.25),transparent_35%),linear-gradient(120deg,rgba(255,215,0,0.16),transparent_40%,rgba(255,255,255,0.08),transparent_80%)]" />
-                    <div className="pointer-events-none absolute -top-10 left-1/2 h-24 w-24 -translate-x-1/2 rounded-full bg-gold-300/20 blur-3xl transition-all duration-300 group-hover:scale-110" />
-                    <p className="relative z-10 inline-flex w-full justify-center rounded-full border border-gold-300/30 bg-[linear-gradient(90deg,rgba(255,215,0,0.18),rgba(255,255,255,0.04),rgba(255,215,0,0.18))] px-4 py-2 text-center text-sm uppercase tracking-[0.35em] text-gold-500 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]">
+                  <div className="relative mx-auto w-full overflow-hidden rounded-[1.5rem] border border-gold-400/20 bg-[#0d1830] p-6 shadow-[0_8px_24px_rgba(0,0,0,0.2)] md:max-w-3xl">
+                    <div className="pointer-events-none absolute inset-0 rounded-[1.5rem] border border-white/5" />
+                    <div className="pointer-events-none absolute -right-2 top-3 h-3 w-3 rounded-full bg-gold-300/80 blur-[1px]" />
+                    <div className="pointer-events-none absolute right-6 top-2 h-2 w-2 rounded-full bg-cream-100/70" />
+                    <div className="pointer-events-none absolute left-4 top-5 h-1.5 w-1.5 rounded-full bg-gold-200/70" />
+                    <p className="relative z-10 text-center text-sm uppercase tracking-[0.35em] text-gold-500">
                       {program.title}
                     </p>
                     <div className="mt-5">
@@ -132,7 +129,7 @@ export function Program() {
                             .map((person) => (
                               <div
                                 key={person}
-                                className="rounded-2xl border border-gold-400/20 bg-gradient-to-r from-royal-950/80 via-royal-900/70 to-royal-950/80 px-3 py-2 text-center text-sm text-gold-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-200 hover:-translate-y-0.5 hover:border-gold-300/50 hover:text-gold-100"
+                                className="rounded-2xl border border-gold-400/20 bg-[#101b35] px-3 py-2 text-center text-sm text-gold-200"
                               >
                                 {person}
                               </div>
