@@ -43,26 +43,16 @@ export function Welcome() {
 
       <div className="relative mx-auto max-w-3xl px-6 text-center">
         <Reveal variant="fade">
-          <p className="text-xs uppercase tracking-[0.4em] text-gold-600">Listen to my birthday song</p>
-          <button
-            onClick={toggle}
-            className="mx-auto mt-5 flex items-center gap-3 rounded-full border border-gold-400/50 bg-cream-50 px-6 py-3 text-[#6E260E] shadow-sm transition-all hover:border-gold-500 hover:shadow-md"
-          >
-            {playing ? <Pause size={18} /> : <Play size={18} />}
-            <span className="text-sm tracking-wide">
-              {playing ? 'Pause' : 'Play'} song
-            </span>
-            <Volume2 size={16} className="text-gold-500" />
-          </button>
+         
           <audio ref={audioRef} loop>
             <source src={birthdayMusic} type="audio/mpeg" />
           </audio>
         </Reveal>
-        
+
 
         <Reveal variant="up" delay={200}>
           <h2 className="mt-16 font-script text-4xl text-gold-500 sm:text-5xl">
-            Welcome to my birthday website
+            Welcome to my birthday website! 
           </h2>
         </Reveal>
 

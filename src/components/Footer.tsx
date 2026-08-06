@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-royal-950 py-16">
       <div className="mx-auto max-w-3xl px-6 text-center">
-        <p className="font-formal text-3xl text-gold-500">Althea Turns 18</p>
+        <p className="font-formal text-3xl text-gold-500">Althea Rein Turns 18</p>
         <FloralDivider className="my-6" />
         <p className="font-serif text-lg italic text-gold-200">
           With love and gratitude
