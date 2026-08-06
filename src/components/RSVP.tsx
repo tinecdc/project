@@ -8,7 +8,7 @@ import rsvpImage from '../../assets/pics/rsvp.jpg';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
-const googleSheetUrl = 'https://script.google.com/macros/s/AKfycbymmbmuB0Y-a2K7Zhde7IKYZrn4VQ-WqPV-5ilpPgWiS0MLQcjEvuyTu0mZ6pbRo0uekA/exec';
+const googleSheetUrl = 'https://script.google.com/macros/s/AKfycbyjTlVOdnXfF_fPxwFqGNy3FW6RFIqQsIvrXaj4hWTvXZy_rI5bvcuUMu9q2ilGgykK8w/exec';
 
 export function RSVP() {
   const [form, setForm] = useState({
