@@ -13,7 +13,7 @@ const programs = [
     title: '18 Shots',
     people: [
       'Ms. Moira Okutumo',  'Mr. Camherzon Osiones', 'Mr. Kevin Dela Vega', 'Ms. Louie Lopez', 'Ms. Pauleen Inocentes', 'Mr. Siegfried Mariano', 'Mr. Youli Santiago', 'Ms. Iya Mendoza',
-       'Mr. Migz Valimento', 'Ms. Heather Trinidad', 'Mr. John Paul Hermogenes', 'Ms. Dhyana Estrella', 'Ms. PJ Cruz', 'Ms. Charlene Peralta', 'Ms. Camilla Celestino', 'Ms. Mariel Mauricio', 'Ms. Ferne Galvez', 'Mr. Gaib Galvez'
+       'Mr. Migz Valimento', 'Ms. Heather Trinidad', 'Mr. John Paul Hermogenes', 'Ms. Dhyana Estrella', 'Ms. PJ Cruz', 'Ms. Charlene Peralta', 'Ms. Camilla Celestino', 'Ms. Mariel Mauricio', 't', 'Mr. Gaib Galvez'
     ],
   },
   {
@@ -34,7 +34,7 @@ const programs = [
     title: '18 Wishes',
     people: [
       'Mr. Clarence Felomino', 'Ms. Ninna Castro', 'Ms. Jasmin Critica', 'Mr. Alfonso Victor Castro', 'Mrs. Josephine De Guzman', 'Mrs. Beth Mallari',
-       'Ms. Vicky Robles', 'Mrs. Liza Gamboa', 'Mrs. Emily Loiz', 'Mrs. Vangie Bernardo', 'Ms. Vida Loiz','Ms. Fely Gamboa', , 'Mr. Latrell Matthew Aurelio',  'Ms. Louella Aurelio','Mrs. Jennilyn Aurelio','Ms. Tamara Dela Fuente', 'Ms. Grace Dela Fuente',
+       'Ms. Vicky Robles', 'Mrs. Liza Gamboa', 'Mrs. Emily Loiz', 'Mrs. Flerida Cruz', 'Mrs. Ida Bernardo','Mrs. Precy Hilario' , 'Mrs. Victoria Galvez',  'Ms. Fely Gamboa','Ms. Latrell & Louella Aurelio','Mrs. Jennilyn Aurelio','Ms. Tamara Dela Fuente', 'Ms. Grace Dela Fuente',
     ],
   },
 ];
