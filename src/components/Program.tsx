@@ -26,15 +26,15 @@ const programs = [
   {
     title: '18 Candles',
     people: [
-       'test','test', 'test', 'Ms. Anne Princess Obaniana', 'Ms. Alexandra Cu', 'Ms. Mhae Dabu-Garcia', 'Ms. Fatima Garcia-Panganiban', 'Ms.Destine Natividad', 'Ms. Elisha Lumba', 'Ms. Ysabelle Lumba',
-      'Ms. Rachel Cu', 'Ms. Samantha Dela Fuente', 'Ms. Zerina Dela Cruz', 'Ms. Christine Dela Cruz', 'Ms. Angelika Dela Cruz', 'Ms. Anya Rayein Miranda', 'Ms. Athena Ray Miranda', 'Ms. Cristina Miranda',
+       'test','test', 'test', 'Ms. Anne Princess Obaniana', 'Ms. Alexandra Cu', 'Mrs. Mhae Dabu-Garcia', 'Mrs. Fatima Garcia-Panganiban', 'Ms.Destine Natividad', 'Ms. Elisha Lumba', 'Ms. Ysabelle Lumba',
+      'Ms. Rachel Cu', 'Ms. Samantha Dela Fuente', 'Ms. Zerina Dela Cruz', 'Ms. Christine Dela Cruz', 'Ms. Angelika Dela Cruz', 'Ms. Anya Rayein Miranda', 'Ms. Athena Ray Miranda', 'Mrs. Cristina Miranda',
     ],
   },
   {
     title: '18 Wishes',
     people: [
       'test', 'Mr. Clarence Felomino', 'Ms. Ninna Castro', 'Ms. Jasmin Critica', 'Mr. Alfonso Victor Castro', 'test', 'test', 'Ms. Jhenna Aurelio', 'Mr. John Persian Cu',
-      'Ms. Josephine De Guzman', 'Ms. Beth Mallari', 'Ms. Vicky Robles', 'Ms. Liza Gamboa', 'Ms. Pie Cu', 'Ms. Fely Gamboa', 'Ms. Noemi Garcia', 'Ms. Carlota Miranda', 'Ms. Grace Dela Fuente',
+      'Ms. Josephine De Guzman', 'Ms. Beth Mallari', 'Ms. Vicky Robles', 'Ms. Liza Gamboa', 'Mrs. Rosario Cu', 'Ms. Fely Gamboa', 'Ms. Noemi Garcia', 'Mrs. Carlota Miranda', 'Ms. Grace Dela Fuente',
     ],
   },
 ];
