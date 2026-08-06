@@ -5,28 +5,28 @@ const programs = [
   {
     title: '18 Roses',
     people: [
-      'Femeng Miranda',  'Roldan Lucena', 'Eric Natividad', 'Reynante Cu','Jun Cu','Lawrence Cu', 'Paolo Garcia', 'Jam Dela Fuente', 'Carlos Labayno'
-      ,'Rafael Panganiban', 'Jerriel Ochoco', 'Franz Tapang', 'Seung Hyun Kim', 'Giro Nolan', 'Domingo Hernandez Jr.','Jared Reyes','Floyd Urrutia',  'Daddy Jorge Miranda',
+      'Mr. Femeng Miranda',  'Mr. Roldan Lucena', 'Mr. Eric Natividad', 'Mr. Reynante Cu','Mr. Jun Cu','Mr. Lawrence Cu', 'Mr. Paolo Garcia', 'Mr. Jam Dela Fuente', 'Mr. Carlos Labayno'
+      ,'Mr. Rafael Panganiban', 'Mr. Jerriel Ochoco', 'Mr. Franz Tapang', 'Mr. Seung Hyun Kim', 'Mr. Giro Nolan', 'Mr. Domingo Hernandez Jr.','Mr. Jared Reyes','Mr. Floyd Urrutia',  'Mr. Daddy Jorge Miranda',
     ],
   },
   {
     title: '18 Shots',
     people: [
-      'Moira Oktumo', 'test', 'Camherzon Osiones', 'Kevin Dela Vega', 'Louie Lopez', 'Pauleen Inocentes', 'Siegfried Mariano', 'Youli Santiago', 'Iya Mendoza',
-       'Migz Valimento', 'Heather Trinidad', 'Dhyana Estrella', 'PJ Cruz', 'Charlene Peralta', 'Camilla Celestino', 'Mariel Mauricio', 'test', 'Gaib Galvez'
+      'Ms. Moira Okutumo', 'test', 'Mr. Camherzon Osiones', 'Mr. Kevin Dela Vega', 'Ms. Louie Lopez', 'Ms. Pauleen Inocentes', 'Mr. Siegfried Mariano', 'Mr. Youli Santiago', 'Ms. Iya Mendoza',
+       'Mr. Migz Valimento', 'Ms. Heather Trinidad', 'Ms. Dhyana Estrella', 'Mr. PJ Cruz', 'Ms. Charlene Peralta', 'Ms. Camilla Celestino', 'Ms. Mariel Mauricio', 'test', 'Mr. Gaib Galvez'
     ],
   },
   {
     title: '18 Gifts',
     people: [
-      'Audrey Rosales', 'Angelique Lalicon', 'Julianna De Guzman', 'Aaliyah Go', 'Maan Del Rosario', 'Dan Allen Pepanio', 'Teffany Montaraye', 'Felix Enriquez', 'Bettina Yan',
-      'Josef Buyco', 'Margarette Reyes', 'Lebron Mapue', 'Mischa Castro', 'Julliana Garcia', 'Anika Boydon', 'Janelle Joaquin', 'Jana Boydon', 'test',
+      'Ms. Audrey Rosales', 'Ms. Angelique Lalicon', 'Ms. Julianna De Guzman', 'Ms. Aaliyah Go', 'Ms. Maan Del Rosario', 'Mr. Dan Allen Pepanio', 'Ms. Teffany Montaraye', 'Mr. Felix Enriquez', 'Ms. Bettina Yan',
+      'Mr. Josef Buyco', 'Ms. Margarette Reyes', 'Mr. Lebron Mapue', 'Ms. Mischa Castro', 'Ms. Julliana Garcia', 'Ms. Anika Boydon', 'Ms. Janelle Joaquin', 'Ms. Jana Boydon', 'test',
     ],
   },
   {
     title: '18 Candles',
     people: [
-       'test','test', 'test', 'Anne Princess Obaniana', 'Alexandra Cu', 'Mhae Dabu-Garcia', 'Fatima Garcia-Panganiban', 'Destine Natividad', 'Elisha Lumba', 'Ysabelle Lumba',
+       'test','test', 'test', 'Ms. Anne Princess Obaniana', 'Alexandra Cu', 'Mhae Dabu-Garcia', 'Fatima Garcia-Panganiban', 'Destine Natividad', 'Elisha Lumba', 'Ysabelle Lumba',
       'Rachel Cu', 'Samantha Dela Fuente', 'Zerina Dela Cruz', 'Christine Dela Cruz', 'Angelika Dela Cruz', 'Anya Rayein Miranda', 'Athena Ray Miranda', 'Cristina Miranda',
     ],
   },
