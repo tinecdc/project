@@ -63,7 +63,7 @@ export function DressCode() {
             <span className="h-4 w-4 rounded-sm border border-white/20" style={{ backgroundColor: '#848884' }} />
             <span className="h-4 w-4 rounded-sm border border-white/20" style={{ backgroundColor: '#000000' }} />
           </div>
-          <span className="text-xs uppercase tracking-[0.3em] text-gold-100">Brown & Gray</span>
+          <span className="text-xs uppercase tracking-[0.3em] text-gold-100">Brown, Gray & Black</span>
         </div>
       </div>
     </section>

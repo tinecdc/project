@@ -71,13 +71,14 @@ export function Welcome() {
         <Reveal variant="up" delay={300}>
           <div className="space-y-5 font-serif text-lg leading-relaxed text-gold-200 sm:text-xl">
             <p>
-              It is with joy and gratitude that I welcome you to my 18th birthday
-              celebration. This milestone is a dream I've long awaited, and I feel
-              truly blessed to share it with my dearest family and friends.
+              It is with utmost gratitude and excitement that I invite you to my 18th birthday celebration! 
             </p>
             <p>
-              Your presence is a precious gift, and I look forward to an evening filled
-              with happiness, laughter, and unforgettable memories together.
+              In the almost eighteen years of my life, you’ve all served as gentle hands that shaped the person I continue to become and left traces of yourselves in every chapter of my story.
+            </p>
+            <p>
+              As I stand on the threshold of adulthood, I wish to celebrate not only the passing of time, but also the people who gave those years plenty of meaning. It would be my greatest joy to have you beside me as I turn this page toward a new chapter.
+
             </p>
           </div>
         </Reveal>
