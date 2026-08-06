@@ -1,11 +1,28 @@
 import { Pause, Play, Volume2 } from 'lucide-react';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Reveal } from './Reveal';
 import { FloralDivider } from './Ornaments';
+import birthdayMusic from '../../assets/birthday_music.mp3';
 
 export function Welcome() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const autoplay = async () => {
+      try {
+        await audio.play();
+        setPlaying(true);
+      } catch {
+        setPlaying(false);
+      }
+    };
+
+    void autoplay();
+  }, []);
 
   const toggle = () => {
     const audio = audioRef.current;
@@ -38,9 +55,10 @@ export function Welcome() {
             <Volume2 size={16} className="text-gold-500" />
           </button>
           <audio ref={audioRef} loop>
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg" />
+            <source src={birthdayMusic} type="audio/mpeg" />
           </audio>
         </Reveal>
+        
 
         <Reveal variant="up" delay={200}>
           <h2 className="mt-16 font-script text-4xl text-gold-500 sm:text-5xl">
