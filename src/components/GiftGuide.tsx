@@ -46,6 +46,14 @@ export function GiftGuide() {
               <p className="font-serif text-lg leading-relaxed text-gold-500">
                 Wishlist QR code
               </p>
+              <a
+                href="https://docs.google.com/document/d/1FkS1waUW2pn4JPrr1s0jD0fAbTpMYrO9nkbo-KdsSms/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-block font-serif text-lg leading-relaxed text-gold-600 underline decoration-gold-400 underline-offset-4"
+              >
+                Click here to view the wishlist
+              </a>
               <div className="mt-4 flex justify-center">
                 <img
                   src={wishlistQrImage}
