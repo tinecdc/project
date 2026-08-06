@@ -1,7 +1,7 @@
 import { Gift, Heart, Wallet } from 'lucide-react';
 import { Reveal } from './Reveal';
 import { SmallDivider } from './Ornaments';
-import wishlistQrImage from '../../assets/pics/wishlistqr.png';
+import wishlistQrImage from '../../assets/pics/wishlistqr.jpg';
 
 export function GiftGuide() {
   return (
@@ -47,7 +47,7 @@ export function GiftGuide() {
                 Wishlist QR code
               </p>
               <a
-                href="https://docs.google.com/document/d/1FkS1waUW2pn4JPrr1s0jD0fAbTpMYrO9nkbo-KdsSms/edit?usp=sharing"
+                href="https://www.thingstogetme.com/2338433a6c1b5"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 inline-block font-serif text-lg leading-relaxed text-gold-600 underline decoration-gold-400 underline-offset-4"
