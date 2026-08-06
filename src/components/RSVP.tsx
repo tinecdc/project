@@ -16,6 +16,7 @@ export function RSVP() {
     email: '',
     phone: '',
   });
+  const [attendanceStatus, setAttendanceStatus] = useState<'attending' | 'not-attending'>('attending');
   const [attendeeInput, setAttendeeInput] = useState('');
   const [attendeeNames, setAttendeeNames] = useState<string[]>([]);
   const [status, setStatus] = useState<Status>('idle');
@@ -58,7 +59,15 @@ export function RSVP() {
     setErrorMsg('');
     setSheetNotice('');
 
+    const attendanceLabel = attendanceStatus === 'attending' ? 'Attending' : "Can't attend";
     const payload = {
+      name,
+      attendance_status: attendanceLabel,
+      attendee_names: attendeeNames.length ? attendeeNames.join(', ') : null,
+      email,
+      phone: phone || null,
+    };
+    const supabasePayload = {
       name,
       attendee_names: attendeeNames.length ? attendeeNames.join(', ') : null,
       email,
@@ -68,7 +77,7 @@ export function RSVP() {
     try {
       if (supabase) {
         try {
-          const { error } = await supabase.from('rsvps').insert(payload);
+          const { error } = await supabase.from('rsvps').insert(supabasePayload);
           if (error) throw error;
         } catch (supabaseError) {
           console.warn('Supabase insert failed:', supabaseError);
@@ -91,6 +100,7 @@ export function RSVP() {
         try {
           const params = new URLSearchParams();
           params.set('name', payload.name);
+          params.set('attendance_status', payload.attendance_status);
           params.set('attendee_names', payload.attendee_names || '');
           params.set('email', payload.email);
           params.set('phone', payload.phone || '');
@@ -126,7 +136,7 @@ export function RSVP() {
             </h2>
             <FloralDivider className="my-6" />
             <p className="font-serif text-xl leading-relaxed text-gold-100">
-              Thank you for informing us of your attendance!
+              Thank you for letting us know your response.
             </p>
             <p className="mt-4 font-formal text-2xl text-gold-200">Althea Turns 18</p>
             {sheetNotice && (
@@ -136,6 +146,7 @@ export function RSVP() {
               onClick={() => {
                 setStatus('idle');
                 setForm({ name: '', email: '', phone: '' });
+                setAttendanceStatus('attending');
                 setAttendeeInput('');
                 setAttendeeNames([]);
                 setSheetNotice('');
@@ -218,50 +229,74 @@ export function RSVP() {
               </Field>
             </div>
 
-            <Field label="Attendee names">
-              <div className="flex flex-col gap-3">
-                <div className="flex gap-2">
-                  <input
-                    type="text"
-                    value={attendeeInput}
-                    onChange={(e) => setAttendeeInput(e.target.value)}
-                    placeholder="Enter one attendee name"
-                    className="form-input"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => {
-                      const trimmed = attendeeInput.trim();
-                      if (!trimmed) return;
-                      setAttendeeNames((current) => [...current, trimmed]);
-                      setAttendeeInput('');
-                    }}
-                    className="rounded-full bg-gold-500 px-4 py-2 text-sm uppercase tracking-widest text-cream-50 transition-all hover:bg-gold-600"
-                  >
-                    Add
-                  </button>
-                </div>
-                <p className="text-xs uppercase tracking-[0.2em] text-gold-200/80">
-                  Don’t forget to click the Add button after typing each attendee name.
-                </p>
-                {attendeeNames.length > 0 && (
-                  <ul className="rounded-xl border border-gold-200/20 bg-cream-50/10 p-3 text-sm text-gold-100/90">
-                    {attendeeNames.map((name, index) => (
-                      <li key={`${name}-${index}`} className="flex items-center justify-between py-1">
-                        <span>{name}</span>
-                        <button
-                          type="button"
-                          onClick={() => setAttendeeNames((current) => current.filter((_, i) => i !== index))}
-                          className="text-xs uppercase tracking-widest text-gold-300 hover:text-gold-200"
-                        >
-                          Remove
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+            <Field label="Will you be attending?">
+              <div className="grid gap-3 sm:grid-cols-2">
+                <AttendOption
+                  active={attendanceStatus === 'attending'}
+                  onClick={() => setAttendanceStatus('attending')}
+                  label="Yes, I will attend"
+                />
+                <AttendOption
+                  active={attendanceStatus === 'not-attending'}
+                  onClick={() => {
+                    setAttendanceStatus('not-attending');
+                    setAttendeeNames([]);
+                  }}
+                  label="I can't attend"
+                />
               </div>
             </Field>
+
+            {attendanceStatus === 'attending' ? (
+              <Field label="Attendee names">
+                <div className="flex flex-col gap-3">
+                  <div className="flex gap-2">
+                    <input
+                      type="text"
+                      value={attendeeInput}
+                      onChange={(e) => setAttendeeInput(e.target.value)}
+                      placeholder="Enter one attendee name"
+                      className="form-input"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const trimmed = attendeeInput.trim();
+                        if (!trimmed) return;
+                        setAttendeeNames((current) => [...current, trimmed]);
+                        setAttendeeInput('');
+                      }}
+                      className="rounded-full bg-gold-500 px-4 py-2 text-sm uppercase tracking-widest text-cream-50 transition-all hover:bg-gold-600"
+                    >
+                      Add
+                    </button>
+                  </div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-gold-200/80">
+                    Don’t forget to click the Add button after typing each attendee name.
+                  </p>
+                  {attendeeNames.length > 0 && (
+                    <ul className="rounded-xl border border-gold-200/20 bg-cream-50/10 p-3 text-sm text-gold-100/90">
+                      {attendeeNames.map((name, index) => (
+                        <li key={`${name}-${index}`} className="flex items-center justify-between py-1">
+                          <span>{name}</span>
+                          <button
+                            type="button"
+                            onClick={() => setAttendeeNames((current) => current.filter((_, i) => i !== index))}
+                            className="text-xs uppercase tracking-widest text-gold-300 hover:text-gold-200"
+                          >
+                            Remove
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </Field>
+            ) : (
+              <div className="rounded-xl border border-gold-200/20 bg-cream-50/10 px-4 py-3 text-sm text-gold-100/90">
+                No problem — we’ll still be grateful for your response.
+              </div>
+            )}
 
             {status === 'error' && (
               <div className="flex items-start gap-3 rounded-xl bg-red-900/40 px-4 py-3 text-sm text-red-100">

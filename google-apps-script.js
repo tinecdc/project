@@ -1,7 +1,7 @@
 function doPost(e) {
   try {
     const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-    const headers = ['Timestamp', 'Name', 'Attendee Count', 'Email', 'Phone'];
+    const headers = ['Timestamp', 'Name', 'Attendance Status', 'Attendee Count', 'Email', 'Phone'];
     const maxAttendees = 10;
 
     const firstRow = sheet.getRange(1, 1, 1, headers.length + maxAttendees).getValues()[0];
@@ -37,11 +37,13 @@ function doPost(e) {
       .map((name) => name.trim())
       .filter(Boolean);
 
+    const attendanceStatus = payload.attendance_status || params.attendance_status || 'Attending';
     const attendeeColumns = Array.from({ length: maxAttendees }, (_, index) => attendeeNames[index] || '');
 
     const row = [
       new Date(),
       payload.name || params.name || '',
+      attendanceStatus,
       attendeeNames.length,
       payload.email || params.email || '',
       payload.phone || params.phone || '',
