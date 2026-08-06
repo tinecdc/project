@@ -26,15 +26,15 @@ const programs = [
   {
     title: '18 Candles',
     people: [
-       'test','test', 'test', 'Ms. Anne Princess Obaniana', 'Alexandra Cu', 'Mhae Dabu-Garcia', 'Fatima Garcia-Panganiban', 'Destine Natividad', 'Elisha Lumba', 'Ysabelle Lumba',
-      'Rachel Cu', 'Samantha Dela Fuente', 'Zerina Dela Cruz', 'Christine Dela Cruz', 'Angelika Dela Cruz', 'Anya Rayein Miranda', 'Athena Ray Miranda', 'Cristina Miranda',
+       'test','test', 'test', 'Ms. Anne Princess Obaniana', 'Ms. Alexandra Cu', 'Ms. Mhae Dabu-Garcia', 'Ms. Fatima Garcia-Panganiban', 'Ms.Destine Natividad', 'Ms. Elisha Lumba', 'Ms. Ysabelle Lumba',
+      'Ms. Rachel Cu', 'Ms. Samantha Dela Fuente', 'Ms. Zerina Dela Cruz', 'Ms. Christine Dela Cruz', 'Ms. Angelika Dela Cruz', 'Ms. Anya Rayein Miranda', 'Ms. Athena Ray Miranda', 'Ms. Cristina Miranda',
     ],
   },
   {
     title: '18 Wishes',
     people: [
-      'test', 'Clarence Felomino', 'Ninna Castro', 'Jasmin Critica', 'Alfonso Victor Castro', 'test', 'test', 'Jhenna Aurelio', 'John Persian Cu',
-      'Josephine De Guzman', 'Beth Mallari', 'Vicky Robles', 'Liza Gamboa', 'Pie Cu', 'Fely Gamboa', 'Noemi Garcia', 'Carlota Miranda', 'Grace Dela Fuente',
+      'test', 'Mr. Clarence Felomino', 'Ms. Ninna Castro', 'Ms. Jasmin Critica', 'Mr. Alfonso Victor Castro', 'test', 'test', 'Ms. Jhenna Aurelio', 'Mr. John Persian Cu',
+      'Ms. Josephine De Guzman', 'Ms. Beth Mallari', 'Ms. Vicky Robles', 'Ms. Liza Gamboa', 'Ms. Pie Cu', 'Ms. Fely Gamboa', 'Ms. Noemi Garcia', 'Ms. Carlota Miranda', 'Ms. Grace Dela Fuente',
     ],
   },
 ];
