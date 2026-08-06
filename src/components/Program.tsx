@@ -33,8 +33,8 @@ const programs = [
   {
     title: '18 Wishes',
     people: [
-      'test', 'Mr. Clarence Felomino', 'Ms. Ninna Castro', 'Ms. Jasmin Critica', 'Mr. Alfonso Victor Castro', 'test', 'test',  'test',
-      'Ms. Josephine De Guzman', 'Ms. Beth Mallari', 'Ms. Vicky Robles', 'Ms. Liza Gamboa', 'Mrs. Rosario Cu', 'Ms. Fely Gamboa', 'Ms. Noemi Garcia', 'Mrs. Carlota Natividad', 'Ms. Jhenna Aurelio','Ms. Grace Dela Fuente',
+      'test', 'Mr. Clarence Felomino', 'Ms. Ninna Castro', 'Ms. Jasmin Critica', 'Mr. Alfonso Victor Castro', 'test', 
+      'Ms. Josephine De Guzman', 'Ms. Beth Mallari', 'Ms. Vicky Robles', 'Ms. Liza Gamboa', 'Mrs. Rosario Cu', 'Ms. Fely Gamboa', 'Ms. Noemi Garcia', 'Mrs. Carlota Natividad', 'Mr. Latrell Matthew Aurelio',  'Ms. Iya Aurelio','Ms. Jhenna Aurelio','Ms. Grace Dela Fuente',
     ],
   },
 ];
