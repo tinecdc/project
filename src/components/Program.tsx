@@ -5,7 +5,7 @@ const programs = [
   {
     title: '18 Roses',
     people: [
-      'Mr. Femeng Miranda',  'Mr. Roldan Lucena', 'Mr. Eric Natividad', 'Mr. Reynante Cu','Mr. Jun Cu','Mr. Lawrence Cu', 'Mr. Paolo Garcia', 'Mr. Jam Dela Fuente', 'Mr. Carlos Labayno'
+      'Mr. Fernando Miranda',  'Mr. Roldan Lucena', 'Mr. Eric Natividad', 'Mr. Reynante Cu','Mr. John Persian Cu','Mr. Lawrence Cu', 'Mr. Paolo Garcia', 'Mr. Jam Dela Fuente', 'Mr. Carlos Labayno'
       ,'Mr. Rafael Panganiban', 'Mr. Jerriel Ochoco', 'Mr. Franz Tapang', 'Mr. Seung Hyun Kim', 'Mr. Giro Nolan', 'Mr. Domingo Hernandez Jr.','Mr. Jared Reyes','Mr. Floyd Urrutia',  'Mr. Daddy Jorge Miranda',
     ],
   },
@@ -33,8 +33,8 @@ const programs = [
   {
     title: '18 Wishes',
     people: [
-      'test', 'Mr. Clarence Felomino', 'Ms. Ninna Castro', 'Ms. Jasmin Critica', 'Mr. Alfonso Victor Castro', 'test', 'test', 'Ms. Jhenna Aurelio', 'Mr. John Persian Cu',
-      'Ms. Josephine De Guzman', 'Ms. Beth Mallari', 'Ms. Vicky Robles', 'Ms. Liza Gamboa', 'Mrs. Rosario Cu', 'Ms. Fely Gamboa', 'Ms. Noemi Garcia', 'Mrs. Carlota Miranda', 'Ms. Grace Dela Fuente',
+      'test', 'Mr. Clarence Felomino', 'Ms. Ninna Castro', 'Ms. Jasmin Critica', 'Mr. Alfonso Victor Castro', 'test', 'test',  'test',
+      'Ms. Josephine De Guzman', 'Ms. Beth Mallari', 'Ms. Vicky Robles', 'Ms. Liza Gamboa', 'Mrs. Rosario Cu', 'Ms. Fely Gamboa', 'Ms. Noemi Garcia', 'Mrs. Carlota Natividad', 'Ms. Jhenna Aurelio','Ms. Grace Dela Fuente',
     ],
   },
 ];
