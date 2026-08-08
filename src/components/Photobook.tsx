@@ -41,8 +41,6 @@ export function Photobook() {
 
         <SmallDivider className="my-8" />
 
-        
-
         <div className="mt-12 flex justify-center">
           <div className="w-full max-w-5xl rounded-[2.5rem] border border-[#d8b37a]/70 bg-[#f1e4d3] p-4 shadow-[0_20px_60px_rgba(96,45,16,0.14)] sm:p-6 lg:p-8">
             <div className="flex flex-col gap-6">
