@@ -24,19 +24,20 @@ const programs = [
     ],
   },
   {
-    title: '18 Shots',
-    people: [
-      'Ms. Moira Okutumo',  'Mr. Camherzon Osiones', 'Mr. Cian Guison', 'Mr. Kevin Dela Vega', 'Ms. Louie Lopez',  'Mr. Siegfried Mariano', 'Mr. Youli Santiago', 'Ms. Iya Mendoza',
-       'Mr. Migz Valimento', 'Ms. Heather Trinidad', 'Mr. John Paul Hermogenes', 'Ms. Dhyana Estrella', 'Ms. Princess Jaenne Cruz', 'Ms. Charlene Peralta', 'Ms. Camilla Celestino', 'Ms. Mariel Mauricio', 'Ms. Pauleen Inocentes', 'Mr. Gaib Galvez'
-    ],
-  },
-  {
     title: '18 Wishes',
     people: [
        'Ms. Ninna Castro', 'Ms. Jasmin Critica', 'Mr. Alfonso Victor Castro', 'Mrs. Josephine De Guzman', 'Mrs. Beth Mallari',
        'Ms. Vicky Robles', 'Mrs. Liza Gamboa', 'Mrs. Emily Loiz', 'Mrs. Flerida Cruz', 'Mrs. Ida Bernardo','Mrs. Precy Hilario' , 'Mrs. Victoria Galvez',  'Mr. Rodelio Gamboa','Ms. Fely Gamboa','Mr. Latrell & Ms. Louella Aurelio','Mrs. Jennilyn Aurelio','Ms. Tamara Dela Fuente', 'Ms. Grace Dela Fuente',
     ],
   },
+  {
+    title: '18 Shots',
+    people: [
+      'Ms. Moira Okutumo',  'Mr. Camherzon Osiones', 'Mr. Cian Guison', 'Mr. Kevin Dela Vega', 'Ms. Louie Lopez',  'Mr. Siegfried Mariano', 'Mr. Youli Santiago', 'Ms. Iya Mendoza',
+       'Mr. Migz Valimento', 'Ms. Heather Trinidad', 'Mr. John Paul Hermogenes', 'Ms. Dhyana Estrella', 'Ms. Princess Jaenne Cruz', 'Ms. Charlene Peralta', 'Ms. Camilla Celestino', 'Ms. Mariel Mauricio', 'Ms. Pauleen Inocentes', 'Mr. Gaib Galvez'
+    ],
+  },
+
 ];
 
 export function Program() {
