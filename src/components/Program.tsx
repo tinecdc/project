@@ -6,14 +6,14 @@ const programs = [
     title: '18 Roses',
     people: [
       'Mr. Fernando Miranda',  'Mr. Roldan Lucena', 'Mr. Frederic Natividad', 'Mr. Reynante Cu','Mr. John Persian Cu','Mr. Lawrence Cu', 'Mr. Paolo Garcia', 'Mr. Jam Dela Fuente', 'Mr. Carlos Labayno'
-      ,'Mr. Rafael Panganiban', 'Mr. Jerriel Ochoco', 'Mr. Franz Tapang', 'Mr. Seung Hyun Kim', 'Mr. Giro Hinolan', 'Mr. Domingo Hernandez Jr.','Mr. Jared Reyes','Mr. Floyd Urrutia',  'Mr. Jorge Miranda',
+      ,'Mr. Rafael Panganiban', 'Mr. Raymund Gamboa', 'Mr. Jerriel Ochoco', 'Mr. Seung Hyun Kim', 'Mr. Giro Hinolan', 'Mr. Domingo Hernandez Jr.','Mr. Jared Reyes','Mr. Floyd Urrutia',  'Mr. Jorge Miranda',
     ],
   },
   {
-    title: '18 Shots',
+    title: '18 Candles',
     people: [
-      'Ms. Moira Okutumo',  'Mr. Camherzon Osiones', 'Mr. Cian Guison', 'Mr. Kevin Dela Vega', 'Ms. Louie Lopez', 'Ms. Pauleen Inocentes', 'Mr. Siegfried Mariano', 'Mr. Youli Santiago', 'Ms. Iya Mendoza',
-       'Mr. Migz Valimento', 'Ms. Heather Trinidad', 'Mr. John Paul Hermogenes', 'Ms. Dhyana Estrella', 'Ms. Princess Jaenne Cruz', 'Ms. Charlene Peralta', 'Ms. Camilla Celestino', 'Ms. Mariel Mauricio',  'Mr. Gaib Galvez'
+      'Mrs. Carlota Natividad', 'Ms. Noemi Garcia',  'Mrs. Rosario Cu','Ms. Anne Princess Obaniana', 'Ms. Alexandra Cu', 'Mrs. Mhae Garcia', 'Mrs. Fatima Panganiban', 'Ms. Destine Natividad', 'Ms. Elisha Lumba', 'Ms. Ysabelle Lumba',
+      'Ms. Rachel Cu', 'Ms. Samantha Dela Fuente', 'Ms. Zerina Dela Cruz', 'Ms. Christine Dela Cruz', 'Ms. Angelika Dela Cruz', 'Ms. Anya Rayein Miranda', 'Ms. Athena Ray Miranda', 'Mrs. Cristina Miranda',
     ],
   },
   {
@@ -24,10 +24,10 @@ const programs = [
     ],
   },
   {
-    title: '18 Candles',
+    title: '18 Shots',
     people: [
-      'Mrs. Carlota Natividad', 'Ms. Noemi Garcia',  'Mrs. Rosario Cu','Ms. Anne Princess Obaniana', 'Ms. Alexandra Cu', 'Mrs. Mhae Garcia', 'Mrs. Fatima Panganiban', 'Ms. Destine Natividad', 'Ms. Elisha Lumba', 'Ms. Ysabelle Lumba',
-      'Ms. Rachel Cu', 'Ms. Samantha Dela Fuente', 'Ms. Zerina Dela Cruz', 'Ms. Christine Dela Cruz', 'Ms. Angelika Dela Cruz', 'Ms. Anya Rayein Miranda', 'Ms. Athena Ray Miranda', 'Mrs. Cristina Miranda',
+      'Ms. Moira Okutumo',  'Mr. Camherzon Osiones', 'Mr. Cian Guison', 'Mr. Kevin Dela Vega', 'Ms. Louie Lopez',  'Mr. Siegfried Mariano', 'Mr. Youli Santiago', 'Ms. Iya Mendoza',
+       'Mr. Migz Valimento', 'Ms. Heather Trinidad', 'Mr. John Paul Hermogenes', 'Ms. Dhyana Estrella', 'Ms. Princess Jaenne Cruz', 'Ms. Charlene Peralta', 'Ms. Camilla Celestino', 'Ms. Mariel Mauricio', 'Ms. Pauleen Inocentes', 'Mr. Gaib Galvez'
     ],
   },
   {
