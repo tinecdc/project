@@ -5,8 +5,8 @@ const programs = [
   {
     title: '18 Roses',
     people: [
-      'Engr. Fernando Miranda',  'Mr. Roldan Lucena', 'Mr. Frederic Natividad', 'Mr. Reynante Cu','Mr. John Persian Cu','Mr. Benito Miranda', 'Mr. Paolo Garcia', 'Mr. Jam Dela Fuente', 'Mr. Carlos Labayno'
-      ,'Mr. Pepito Marquez', 'Mr. Conrado Miranda', 'Mr. Jerriel Ochoco', 'Mr. Seung Hyun Kim', 'Mr. Giro Hinolan', 'Mr. Domingo Hernandez Jr.','Mr. Jared Reyes','Mr. Floyd Urrutia',  'Mr. Jorge Miranda',
+      'Engr. Fernando Miranda',  'Mr. Roldan Lucena', 'Mr. Frederic Natividad', 'Mr. Reynante Cu','Mr. Benito Miranda','Mr. Pepito Marquez', 'Mr. Conrado Miranda', 'Mr. John Persian Cu', 'Mr. Paolo Garcia', 'Mr. Jam Dela Fuente', 'Mr. Carlos Labayno'
+      , 'Mr. Jerriel Ochoco', 'Mr. Seung Hyun Kim', 'Mr. Giro Hinolan', 'Mr. Domingo Hernandez Jr.','Mr. Jared Reyes','Mr. Floyd Urrutia',  'Mr. Jorge Miranda',
     ],
   },
   {
