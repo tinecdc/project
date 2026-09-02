@@ -5,7 +5,7 @@ const programs = [
   {
     title: '18 Roses',
     people: [
-      'Engr. Fernando Miranda',  'Mr. Roldan Lucena', 'Mr. Frederic Natividad', 'Mr. Reynante Cu','Mr. Benito Miranda','Mr. Pepito Marquez', 'Mr. Conrado Miranda', 'Mr. John Persian Cu', 'Mr. Paolo Garcia', 'Mr. Jam Dela Fuente', 'Mr. Carlos Labayno'
+      'Engr. Fernando Miranda',  'Mr. Roldan Lucena', 'Mr. Frederic Natividad', 'Mr. Reynante Cu','Mr. Benito Miranda','Mr. Pepito Marquez', 'Mr. Conrado Miranda', 'Mr. John Persian Cu', 'Mr. Paolo Garcia', 'Mr. Jam Dela Fuente', 'Mr. Lawrence Cu'
       , 'Mr. Jerriel Ochoco', 'Mr. Seung Hyun Kim', 'Mr. Giro Hinolan', 'Mr. Domingo Hernandez Jr.','Mr. Jared Reyes','Mr. Floyd Urrutia',  'Mr. Jorge Miranda',
     ],
   },
@@ -33,8 +33,8 @@ const programs = [
   {
     title: '18 Shots',
     people: [
-      'Ms. Moira Okutumo',  'Mr. Camherzon Osiones', 'Mr. Cian Guison', 'Mr. Kevin Dela Vega', 'Ms. Louie Lopez',  'Mr. Siegfried Mariano', 'Mr. Youli Santiago', 'Ms. Iya Mendoza',
-       'Mr. Migz Valimento', 'Ms. Heather Trinidad', 'Mr. John Paul Hermogenes', 'Ms. Dhyana Estrella', 'Ms. Princess Jaenne Cruz', 'Ms. Charlene Peralta', 'Ms. Camilla Celestino', 'Ms. Mariel Mauricio', 'Ms. Pauleen Inocentes', 'Mr. Gaib Galvez'
+      'Mr. Carlos Labayno', 'Ms. Moira Okutumo',  'Mr. Camherzon Osiones', 'Mr. Cian Guison', 'Mr. Kevin Dela Vega', 'Ms. Louie Lopez',  'Mr. Siegfried Mariano', 'Mr. Youli Santiago', 'Ms. Iya Mendoza',
+       'Mr. Migz Valimento', 'Ms. Heather Trinidad', 'Mr. John Paul Hermogenes', 'Ms. Dhyana Estrella', 'Ms. Princess Jaenne Cruz',  'Ms. Camilla Celestino', 'Ms. Mariel Mauricio', 'Ms. Pauleen Inocentes', 'Mr. Gaib Galvez'
     ],
   },
 
