@@ -182,7 +182,7 @@ export function RSVP() {
 
         <Reveal variant="up" delay={200}>
           <p className="mb-8 text-center text-sm uppercase tracking-widest text-gold-100">
-            The favor of a response is requested before August 30, 2026
+            The favor of a response is requested before September 6, 2026
           </p>
 
           <form onSubmit={submit} className="space-y-5 rounded-3xl border border-gold-200/15 bg-royal-950/20 p-6 backdrop-blur-sm sm:p-8">
