@@ -6,7 +6,7 @@ import { FloralDivider } from './Ornaments';
 const faqs = [
   {
     q: 'RSVP',
-    a: 'Your RSVP allows us to finalize guest arrangements, including seating and catering, to ensure everyone enjoys a memorable evening. Kindly confirm your attendance on or before August 30, 2026.',
+    a: 'Your RSVP allows us to finalize guest arrangements, including seating and catering, to ensure everyone enjoys a memorable evening. Kindly confirm your attendance on or before September 6, 2026.',
   },
   {
     q: 'Is there parking space available for my car?',
